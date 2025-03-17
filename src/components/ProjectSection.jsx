@@ -61,41 +61,57 @@ const ProjectsSection = () => {
   return (
     <section className="py-12 bg-transparent">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-20 mt-10">OUR PROJECTS</h2>
+        <h2 className="text-3xl font-bold text-center text-white mb-10 mt-10">OUR PROJECTS</h2>
 
         {/* Tabs for filtering */}
         <div className="flex justify-center gap-4 mb-8">
-  <button
-    onClick={() => setActiveTab('adfilm')}
-    className={`px-4 py-2 border-b-2 ${
-      activeTab === 'adfilm'
-        ? 'border-white text-white' // Active tab style
-        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
-    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
-  >
-    Ad Films
-  </button>
-  <button
-    onClick={() => setActiveTab('theatre')}
-    className={`px-4 py-2 border-b-2 ${
-      activeTab === 'theatre'
-        ? 'border-white text-white' // Active tab style
-        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
-    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
-  >
-    Theatre
-  </button>
-  <button
-    onClick={() => setActiveTab('shortfilm')}
-    className={`px-4 py-2 border-b-2 ${
-      activeTab === 'shortfilm'
-        ? 'border-white text-white' // Active tab style
-        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
-    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
-  >
-    Short Films
-  </button>
-</div>
+          <button
+            onClick={() => setActiveTab('adfilm')}
+            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
+            className={`px-4 py-2 relative ${
+              activeTab === 'adfilm'
+                ? 'text-white' // Active tab text color
+                : 'text-gray-300 hover:text-white' // Inactive tab text color
+            } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
+          >
+            Ad Films
+            {/* Active tab underline */}
+            {activeTab === 'adfilm' && (
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+            )}
+          </button>
+          <button
+            onClick={() => setActiveTab('theatre')}
+            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
+            className={`px-4 py-2 relative ${
+              activeTab === 'theatre'
+                ? 'text-white' // Active tab text color
+                : 'text-gray-300 hover:text-white' // Inactive tab text color
+            } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
+          >
+            Theatre
+            {/* Active tab underline */}
+            {activeTab === 'theatre' && (
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+            )}
+          </button>
+          <button
+            onClick={() => setActiveTab('shortfilm')}
+            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
+            className={`px-4 py-2 relative ${
+              activeTab === 'shortfilm'
+                ? 'text-white' // Active tab text color
+                : 'text-gray-300 hover:text-white' // Inactive tab text color
+            } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
+          >
+            Short Films
+            {/* Active tab underline */}
+            {activeTab === 'shortfilm' && (
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+            )}
+          </button>
+        </div>
+
         {/* Project cards */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent">
           {filteredProjects.map((project) => (
