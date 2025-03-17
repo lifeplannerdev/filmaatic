@@ -69,43 +69,43 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden ${
-          isScrolled ? "bg-black" : "bg-black/80 backdrop-blur-2xl"
-        } rounded-[25px] shadow-lg absolute w-[90%] z-[1000] top-20 left-1/2 transform -translate-x-1/2 border border-gray-800 transition-all duration-300 ease-out ${
-          isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        }`}
-      >
-        <Link
-          to="/"
-          className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
-          onClick={() => setIsOpen(false)}
+      {/* Mobile Menu - Conditionally Rendered */}
+      {isOpen && (
+        <div
+          className={`md:hidden ${
+            isScrolled ? "bg-black" : "bg-black/80 backdrop-blur-2xl"
+          } rounded-[25px] shadow-lg absolute w-[90%] z-[1000] top-20 left-1/2 transform -translate-x-1/2 border border-gray-800 transition-all duration-300 ease-out`}
         >
-          Home
-        </Link>
-        <Link
-          to="/about"
-          className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
-          onClick={() => setIsOpen(false)}
-        >
-          About
-        </Link>
-        <Link
-          to="/services"
-          className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
-          onClick={() => setIsOpen(false)}
-        >
-          Services
-        </Link>
-        <Link
-          to="/contact"
-          className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
-          onClick={() => setIsOpen(false)}
-        >
-          Contact
-        </Link>
-      </div>
+          <Link
+            to="/"
+            className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/services"
+            className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
+            onClick={() => setIsOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </div>
+      )}
 
       {/* Dark Overlay */}
       {isOpen && (
