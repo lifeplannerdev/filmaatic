@@ -67,30 +67,35 @@ const ProjectsSection = () => {
         <div className="flex justify-center gap-4 mb-8">
   <button
     onClick={() => setActiveTab('adfilm')}
-    className={`px-3 py-1 sm:px-4 sm:py-2 rounded-lg ${
-      activeTab === 'adfilm' ? 'bg-white/20 text-white' : 'bg-white/10 text-gray-300'
-    } transition-all duration-300 text-sm sm:text-base`}
+    className={`px-4 py-2 border-b-2 ${
+      activeTab === 'adfilm'
+        ? 'border-white text-white' // Active tab style
+        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
+    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
   >
     Ad Films
   </button>
   <button
     onClick={() => setActiveTab('theatre')}
-    className={`px-3 py-1 sm:px-4 sm:py-2 rounded-lg ${
-      activeTab === 'theatre' ? 'bg-white/20 text-white' : 'bg-white/10 text-gray-300'
-    } transition-all duration-300 text-sm sm:text-base`}
+    className={`px-4 py-2 border-b-2 ${
+      activeTab === 'theatre'
+        ? 'border-white text-white' // Active tab style
+        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
+    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
   >
     Theatre
   </button>
   <button
     onClick={() => setActiveTab('shortfilm')}
-    className={`px-3 py-1 sm:px-4 sm:py-2 rounded-lg ${
-      activeTab === 'shortfilm' ? 'bg-white/20 text-white' : 'bg-white/10 text-gray-300'
-    } transition-all duration-300 text-sm sm:text-base`}
+    className={`px-4 py-2 border-b-2 ${
+      activeTab === 'shortfilm'
+        ? 'border-white text-white' // Active tab style
+        : 'border-transparent text-gray-300 hover:text-white' // Inactive tab style
+    } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
   >
     Short Films
   </button>
 </div>
-
         {/* Project cards */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent">
           {filteredProjects.map((project) => (
