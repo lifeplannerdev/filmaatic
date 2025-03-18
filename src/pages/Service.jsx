@@ -1,15 +1,24 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
-
+import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa'; // Added new icons
 
 const Service = () => {
-  // Function to handle the "Ready to Join" button click
-  const handleReadyToJoinClick = () => {
-    // Add your logic here (e.g., redirect to a contact page or open a modal)
-    console.log('Ready to Join button clicked!');
-    // Example: Redirect to a contact page
-    // window.location.href = '/contact';
+  // Functions to handle icon clicks
+  const handleDialerClick = () => {
+    window.location.href = 'tel:+1234567890'; // Replace with your phone number
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/1234567890', '_blank'); // Replace with your WhatsApp link
+  };
+
+  const handleInstagramClick = () => {
+    window.open('https://instagram.com/yourprofile', '_blank'); // Replace with your Instagram link
+  };
+
+  const handleMailClick = () => {
+    window.location.href = 'mailto:info@filmaatic.com'; // Replace with your email
   };
 
   return (
@@ -138,18 +147,54 @@ const Service = () => {
             </div>
           </Tilt>
         </section>
+        <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+          }
 
-        {/* Ready to Join Section */}
+          .floating {
+            animation: float 3s ease-in-out infinite;
+          }
+        `}
+      </style>
+
+        {/* Contact Icons Section */}
         <section className="text-center animate-fade-in-up">
           <p className="text-gray-300 mb-8">
             Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
           </p>
-          <button
-            onClick={handleReadyToJoinClick}
-            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300"
-          >
-            Join Us 
-          </button>
+          <div className="flex justify-center space-x-6">
+            <button
+              onClick={handleDialerClick}
+              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
+            >
+              <FaPhoneAlt className="text-2xl" />
+            </button>
+            <button
+              onClick={handleWhatsAppClick}
+              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <FaWhatsapp className="text-2xl" />
+            </button>
+            <button
+              onClick={handleInstagramClick}
+              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
+              style={{ animationDelay: '0.4s' }}
+            >
+              <FaInstagram className="text-2xl" />
+            </button>
+            <button
+              onClick={handleMailClick}
+              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
+              style={{ animationDelay: '0.6s' }}
+            >
+              <FaEnvelope className="text-2xl" />
+            </button>
+          </div>
         </section>
       </div>
     </div>
