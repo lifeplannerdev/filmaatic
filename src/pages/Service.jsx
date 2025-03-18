@@ -12,12 +12,12 @@ const Service = () => {
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float-delay"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
+      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Hero Section */}
         <section className="text-center mb-20 animate-fade-in">
-          <h1 className="text-6xl font-bold mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Services</span>
-          </h1>
+          <h2 className="text-6xl font-bold mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Academy</span>
+          </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             At Filmaatic Studio, we offer best-in-class training and services in acting, dance, and screen casting. Whether you're a beginner or a seasoned professional, we have something for everyone.
           </p>
@@ -33,7 +33,7 @@ const Service = () => {
             transitionSpeed={500}
             className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
           >
-            <h2 className="text-3xl font-semibold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <h2 className="text-3xl font-semibold mb-8">
               Acting School
             </h2>
             <div className="space-y-8">
@@ -69,7 +69,7 @@ const Service = () => {
             transitionSpeed={500}
             className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
           >
-            <h2 className="text-3xl font-semibold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <h2 className="text-3xl font-semibold mb-8">
               Dance Studio
             </h2>
             <div className="space-y-8">
@@ -105,7 +105,7 @@ const Service = () => {
             transitionSpeed={500}
             className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
           >
-            <h2 className="text-3xl font-semibold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <h2 className="text-3xl font-semibold mb-8">
               Screen Casting
             </h2>
             <div className="space-y-8">
