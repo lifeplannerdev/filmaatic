@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home'; // Import the Home component
 import About from './pages/About';
 import Service from './pages/Service';
+import Footer from './components/Footer';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
             <Route path="/service" element={<Service />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );

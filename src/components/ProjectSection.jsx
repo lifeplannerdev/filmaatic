@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motion components
 
 // Sample data for projects with a `type` field
 const projects = [
@@ -77,7 +78,10 @@ const ProjectsSection = () => {
             Ad Films
             {/* Active tab underline */}
             {activeTab === 'adfilm' && (
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+              <motion.span
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
+                layoutId="underline" // Unique ID for the underline animation
+              />
             )}
           </button>
           <button
@@ -92,7 +96,10 @@ const ProjectsSection = () => {
             Theatre
             {/* Active tab underline */}
             {activeTab === 'theatre' && (
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+              <motion.span
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
+                layoutId="underline" // Unique ID for the underline animation
+              />
             )}
           </button>
           <button
@@ -107,39 +114,51 @@ const ProjectsSection = () => {
             Short Films
             {/* Active tab underline */}
             {activeTab === 'shortfilm' && (
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white"></span>
+              <motion.span
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
+                layoutId="underline" // Unique ID for the underline animation
+              />
             )}
           </button>
         </div>
 
         {/* Project cards */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="rounded-[25px] overflow-hidden aspect-[3/4] w-full relative"
-            >
-              {/* Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent"
+          layout // Enable layout animations
+        >
+          <AnimatePresence mode="wait">
+            {filteredProjects.map((project) => (
+              <motion.div
+                key={project.id}
+                className="rounded-[25px] overflow-hidden aspect-[3/4] w-full relative"
+                initial={{ opacity: 0, y: 20 }} // Initial animation state
+                animate={{ opacity: 1, y: 0 }} // Animate to this state
+                exit={{ opacity: 0, y: 20 }} // Exit animation state
+                transition={{ duration: 0.3 }} // Animation duration
+              >
+                {/* Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-4 sm:p-6">
-                <p className="text-sm text-white mb-2">{project.title}</p>
-                <p className="text-sm text-gray-200 mb-4">{project.description}</p>
-                <a
-                  href={project.link}
-                  className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10 text-sm sm:text-base w-[100%]"
-                >
-                  Watch Trailer
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-4 sm:p-6">
+                  <p className="text-sm text-white mb-2">{project.title}</p>
+                  <p className="text-sm text-gray-200 mb-4">{project.description}</p>
+                  <a
+                    href={project.link}
+                    className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10 text-sm sm:text-base w-[100%]"
+                  >
+                    Watch Trailer
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

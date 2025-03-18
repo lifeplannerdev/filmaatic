@@ -128,6 +128,7 @@ const Service = () => {
 
         {/* Contact Icons Section */}
         <section className="text-center animate-fade-in-up">
+          <h2 className='font-bold text-5xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500'>Join Us</h2>
           <p className="text-gray-300 mb-8">
             Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
           </p>
