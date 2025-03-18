@@ -91,7 +91,7 @@ const Navbar = () => {
             About
           </Link>
           <Link
-            to="/services"
+            to="/service"
             className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
             onClick={() => setIsOpen(false)}
           >

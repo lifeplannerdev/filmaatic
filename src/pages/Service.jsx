@@ -1,7 +1,7 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
-import EnquirySection from '../components/Enquiry';
+import EnquirySection from '../components/Enquiry'; // Correct import path
 
 const Service = () => {
   return (
@@ -12,7 +12,7 @@ const Service = () => {
         <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float-delay"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl"> {/* Adjusted max-width */}
+      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
         {/* Hero Section */}
         <section className="text-center mb-20 animate-fade-in">
           <h1 className="text-6xl font-bold mb-6">
@@ -130,19 +130,9 @@ const Service = () => {
             </div>
           </Tilt>
         </section>
-
-        {/* Call to Action Section */}
-        {/* <section className="text-center animate-fade-in-up">
-          <h2 className="text-3xl font-semibold mb-6">Ready to Join Us?</h2>
-          <p className="text-gray-300 mb-8">
-            Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
-          </p>
-          <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300">
-            Enroll Now
-          </button>
-        </section> */}
-        
       </div>
+
+      {/* Enquiry Section */}
       <EnquirySection />
     </div>
   );
