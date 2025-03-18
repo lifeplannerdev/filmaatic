@@ -1,7 +1,6 @@
 import React from 'react';
-import Tilt from 'react-parallax-tilt';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
-import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa'; // Added new icons
+import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Service = () => {
   // Functions to handle icon clicks
@@ -22,7 +21,7 @@ const Service = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white py-20"> {/* Removed overflow-hidden */}
+    <div className="min-h-screen bg-slate-950 text-white py-20">
       {/* Background Gradients */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float"></div>
@@ -42,14 +41,7 @@ const Service = () => {
 
         {/* Acting School Card */}
         <section className="mb-16 animate-fade-in-up">
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={500}
-            className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
-          >
+          <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
             <h2 className="text-3xl font-semibold mb-8">
               Acting School
             </h2>
@@ -73,19 +65,12 @@ const Service = () => {
                 </p>
               </div>
             </div>
-          </Tilt>
+          </div>
         </section>
 
         {/* Dance Studio Card */}
         <section className="mb-16 animate-fade-in-up">
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={500}
-            className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
-          >
+          <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
             <h2 className="text-3xl font-semibold mb-8">
               Dance Studio
             </h2>
@@ -109,19 +94,12 @@ const Service = () => {
                 </p>
               </div>
             </div>
-          </Tilt>
+          </div>
         </section>
 
         {/* Screen Casting Card */}
         <section className="mb-16 animate-fade-in-up">
-          <Tilt
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={500}
-            className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
-          >
+          <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
             <h2 className="text-3xl font-semibold mb-8">
               Screen Casting
             </h2>
@@ -145,28 +123,15 @@ const Service = () => {
                 </p>
               </div>
             </div>
-          </Tilt>
+          </div>
         </section>
-        <style>
-        {`
-          @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-          }
-
-          .floating {
-            animation: float 3s ease-in-out infinite;
-          }
-        `}
-      </style>
 
         {/* Contact Icons Section */}
         <section className="text-center animate-fade-in-up">
           <p className="text-gray-300 mb-8">
             Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
           </p>
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-6 mt-10">
             <button
               onClick={handleDialerClick}
               className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
@@ -197,6 +162,21 @@ const Service = () => {
           </div>
         </section>
       </div>
+
+      {/* Floating Animation Styles */}
+      <style>
+        {`
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+          }
+
+          .floating {
+            animation: float 3s ease-in-out infinite;
+          }
+        `}
+      </style>
     </div>
   );
 };
