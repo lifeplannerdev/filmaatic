@@ -1,11 +1,19 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
-import EnquirySection from '../components/Enquiry'; // Correct import path
+
 
 const Service = () => {
+  // Function to handle the "Ready to Join" button click
+  const handleReadyToJoinClick = () => {
+    // Add your logic here (e.g., redirect to a contact page or open a modal)
+    console.log('Ready to Join button clicked!');
+    // Example: Redirect to a contact page
+    // window.location.href = '/contact';
+  };
+
   return (
-    <div className="min-h-screen bg-slate-950 text-white py-20 overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-white py-20"> {/* Removed overflow-hidden */}
       {/* Background Gradients */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float"></div>
@@ -15,7 +23,7 @@ const Service = () => {
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Hero Section */}
         <section className="text-center mb-20 animate-fade-in">
-          <h2 className="text-6xl font-bold mb-6">
+          <h2 className="text-5xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Academy</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
@@ -130,10 +138,20 @@ const Service = () => {
             </div>
           </Tilt>
         </section>
-      </div>
 
-      {/* Enquiry Section */}
-      <EnquirySection />
+        {/* Ready to Join Section */}
+        <section className="text-center animate-fade-in-up">
+          <p className="text-gray-300 mb-8">
+            Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
+          </p>
+          <button
+            onClick={handleReadyToJoinClick}
+            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300"
+          >
+            Join Us 
+          </button>
+        </section>
+      </div>
     </div>
   );
 };
