@@ -56,37 +56,18 @@ const Service = () => {
         >
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
             {/* Image on the left */}
-            <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+            <div className="w-full flex justify-center md:justify-content-center">
               <motion.img
                 src="/img/logo.png"
-                className="w-[50%] md:w-[57%] h-auto object-contain"
+                className="w-[50%] md:w-[54%] h-auto object-contain"
                 alt="Academy Logo"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
             </div>
 
-            {/* Compact Glassmorphic Card */}
-            <motion.div
-              className="w-full md:w-1/2 bg-[rgba(255,255,255,0.1)] backdrop-blur-lg border border-[rgba(255,255,255,0.2)] rounded-xl p-6 shadow-lg transition-all duration-300 hover:bg-[rgba(255,255,255,0.15)] hover:scale-105"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <h2 className="text-4xl font-bold mb-3">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                  Our Academy
-                </span>
-              </h2>
-              <p className="text-base text-gray-300 leading-relaxed">
-                At <span className="font-semibold text-white">Filmaatic Studio</span>, we nurture talent and shape future stars with expert training in
-                <span className="text-pink-400 font-semibold"> acting</span>, <span className="text-purple-400 font-semibold"> dance</span>, and{' '}
-                <span className="text-blue-400 font-semibold"> screen casting</span>.
-                <br /><br />
-                Whether you're a beginner or an experienced artist, our top-tier instructors and modern facilities will guide you toward success.
-                <br /><br />
-                Join us and turn your <strong>artistic dreams into reality!</strong>
-              </p>
-            </motion.div>
+
+            
           </div>
         </motion.section>
 
