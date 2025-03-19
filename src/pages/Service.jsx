@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
 import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { motion } from 'framer-motion'; // Import framer-motion for animations
 
 const Service = () => {
   // Functions to handle icon clicks
@@ -20,6 +21,22 @@ const Service = () => {
     window.location.href = 'mailto:info@filmaatic.com'; // Replace with your email
   };
 
+  // Animation variants for framer-motion
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20">
       {/* Background Gradients */}
@@ -30,46 +47,59 @@ const Service = () => {
 
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Hero Section */}
-        <section className="text-center md:text-left mb-16 animate-fade-in">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
-    
-    {/* Image on the left */}
-    <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-      <img
-        src="/img/logo.png"
-        className="w-[60%] md:w-[70%] h-auto object-contain"
-        alt="Academy Logo"
-      />
-    </div>
+        <motion.section
+          className="text-center md:text-left mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
+            {/* Image on the left */}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+              <motion.img
+                src="/img/logo.png"
+                className="w-[50%] md:w-[57%] h-auto object-contain"
+                alt="Academy Logo"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
 
-    {/* Compact Glassmorphic Card */}
-    <div className="w-full md:w-1/2 bg-[rgba(255,255,255,0.1)] backdrop-blur-lg border border-[rgba(255,255,255,0.2)] rounded-xl p-12 shadow-lg transition-all duration-300 hover:bg-[rgba(255,255,255,0.15)] hover:scale-105">
-      <h2 className="text-4xl font-bold mb-3">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-          Our Academy
-        </span>
-      </h2>
-      <p className="text-base text-gray-300 leading-relaxed">
-        At <span className="font-semibold text-white">Filmaatic Studio</span>, we nurture talent and shape future stars with expert training in  
-        <span className="text-pink-400 font-semibold"> acting</span>, <span className="text-purple-400 font-semibold"> dance</span>, and <span className="text-blue-400 font-semibold"> screen casting</span>.
-        <br /><br />
-        Whether you're a beginner or an experienced artist, our top-tier instructors and modern facilities will guide you toward success. 
-        <br /><br />
-        Join us and turn your **artistic dreams into reality!**
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
+            {/* Compact Glassmorphic Card */}
+            <motion.div
+              className="w-full md:w-1/2 bg-[rgba(255,255,255,0.1)] backdrop-blur-lg border border-[rgba(255,255,255,0.2)] rounded-xl p-6 shadow-lg transition-all duration-300 hover:bg-[rgba(255,255,255,0.15)] hover:scale-105"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h2 className="text-4xl font-bold mb-3">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                  Our Academy
+                </span>
+              </h2>
+              <p className="text-base text-gray-300 leading-relaxed">
+                At <span className="font-semibold text-white">Filmaatic Studio</span>, we nurture talent and shape future stars with expert training in
+                <span className="text-pink-400 font-semibold"> acting</span>, <span className="text-purple-400 font-semibold"> dance</span>, and{' '}
+                <span className="text-blue-400 font-semibold"> screen casting</span>.
+                <br /><br />
+                Whether you're a beginner or an experienced artist, our top-tier instructors and modern facilities will guide you toward success.
+                <br /><br />
+                Join us and turn your <strong>artistic dreams into reality!</strong>
+              </p>
+            </motion.div>
+          </div>
+        </motion.section>
 
         {/* Acting School Card */}
-        <section className="mb-16 animate-fade-in-up">
+        <motion.section
+          className="mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
-            <h2 className="text-3xl font-semibold mb-8">
-              Acting School
-            </h2>
+            <h2 className="text-3xl font-semibold mb-8">Acting School</h2>
             <div className="space-y-8">
               <div>
                 <div className="flex items-center mb-4">
@@ -91,14 +121,18 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Dance Studio Card */}
-        <section className="mb-16 animate-fade-in-up">
+        <motion.section
+          className="mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
-            <h2 className="text-3xl font-semibold mb-8">
-              Dance Studio
-            </h2>
+            <h2 className="text-3xl font-semibold mb-8">Dance Studio</h2>
             <div className="space-y-8">
               <div>
                 <div className="flex items-center mb-4">
@@ -120,14 +154,18 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Screen Casting Card */}
-        <section className="mb-16 animate-fade-in-up">
+        <motion.section
+          className="mb-16"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <div className="rounded-[25px] p-8 border border-[rgba(255,255,255,0.1)] shadow-lg backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300 transform hover:scale-105">
-            <h2 className="text-3xl font-semibold mb-8">
-              Screen Casting
-            </h2>
+            <h2 className="text-3xl font-semibold mb-8">Screen Casting</h2>
             <div className="space-y-8">
               <div>
                 <div className="flex items-center mb-4">
@@ -149,44 +187,39 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Contact Icons Section */}
-        <section className="text-center animate-fade-in-up">
-          <h2 className='font-bold text-5xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500'>Join Us</h2>
+        <motion.section
+          className="text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="font-bold text-5xl mb-10 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500">Join Us</h2>
           <p className="text-gray-300 mb-8">
             Whether you're an aspiring actor, dancer, or performer, Filmaatic Studio is here to help you achieve your dreams. Join our community today!
           </p>
           <div className="flex justify-center space-x-6 mt-10">
-            <button
-              onClick={handleDialerClick}
-              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
-            >
-              <FaPhoneAlt className="text-2xl" />
-            </button>
-            <button
-              onClick={handleWhatsAppClick}
-              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
-              style={{ animationDelay: '0.2s' }}
-            >
-              <FaWhatsapp className="text-2xl" />
-            </button>
-            <button
-              onClick={handleInstagramClick}
-              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
-              style={{ animationDelay: '0.4s' }}
-            >
-              <FaInstagram className="text-2xl" />
-            </button>
-            <button
-              onClick={handleMailClick}
-              className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
-              style={{ animationDelay: '0.6s' }}
-            >
-              <FaEnvelope className="text-2xl" />
-            </button>
+            {[
+              { icon: <FaPhoneAlt className="text-2xl" />, onClick: handleDialerClick },
+              { icon: <FaWhatsapp className="text-2xl" />, onClick: handleWhatsAppClick },
+              { icon: <FaInstagram className="text-2xl" />, onClick: handleInstagramClick },
+              { icon: <FaEnvelope className="text-2xl" />, onClick: handleMailClick },
+            ].map((item, index) => (
+              <motion.button
+                key={index}
+                onClick={item.onClick}
+                className="p-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:from-pink-600 hover:to-purple-600 transition-all duration-300 floating"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {item.icon}
+              </motion.button>
+            ))}
           </div>
-        </section>
+        </motion.section>
       </div>
 
       {/* Floating Animation Styles */}
