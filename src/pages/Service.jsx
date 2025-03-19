@@ -55,20 +55,16 @@ const Service = () => {
           viewport={{ once: true }}
         >
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
-            {/* Image on the left */}
-            <div className="w-full flex justify-center md:justify-content-center">
-              <motion.img
-                src="/img/logo.png"
-                className="w-[50%] md:w-[54%] h-auto object-contain"
-                alt="Academy Logo"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
-
-
-            
-          </div>
+  <div className="w-full flex justify-center md:justify-center">
+    <motion.img
+      src="/img/logo.png"
+      className="w-[80%] md:w-[50%] h-auto object-contain" // 60% on mobile, 50% on larger screens
+      alt="Academy Logo"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+    />
+  </div>
+</div>
         </motion.section>
 
         {/* Acting School Card */}
