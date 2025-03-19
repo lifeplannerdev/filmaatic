@@ -47,7 +47,7 @@ const projects = [
     id: 6,
     title: 'Tumbbad 2018',
     description: '2020/Short-film',
-    image: 'https://i.pinimg.com/736x/1d/a0/87/1da087163181848b0535101a4c719b10.jpg',
+    image: '/img/paythuthornaval.webp',
     link: '#',
     type: 'shortfilm', // Added type
   },

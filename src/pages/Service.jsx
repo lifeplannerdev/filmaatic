@@ -31,9 +31,19 @@ const Service = () => {
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Hero Section */}
         <section className="text-center mb-20 animate-fade-in">
-          <h2 className="text-5xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Academy</span>
-          </h2>
+        <h2 className="text-5xl font-bold mb-6 flex flex-col items-center">
+  <div className="w-full flex justify-center mb-2">
+    <img
+      src="/img/logo.png"
+      className="w-[50%] h-auto object-contain"
+      alt="Academy Logo"
+    />
+  </div>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+    Academy
+  </span>
+</h2>
+
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             At Filmaatic Studio, we offer best-in-class training and services in acting, dance, and screen casting. Whether you're a beginner or a seasoned professional, we have something for everyone.
           </p>

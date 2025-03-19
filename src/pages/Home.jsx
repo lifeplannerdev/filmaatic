@@ -8,10 +8,8 @@ import EnquirySection from '../components/Enquiry';
 const Home = () => {
   return (
     <>
-      {/* Header (Hero Section) */}
-      <Header />
 
-      {/* Cards and Projects Section */}
+      <Header />
       <Cards />
       <ProjectsSection />
       <EnquirySection />
