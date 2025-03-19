@@ -30,24 +30,39 @@ const Service = () => {
 
       <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Hero Section */}
-        <section className="text-center mb-20 animate-fade-in">
-        <h2 className="text-5xl font-bold mb-6 flex flex-col items-center">
-  <div className="w-full flex justify-center mb-2">
-    <img
-      src="/img/logo.png"
-      className="w-[50%] h-auto object-contain"
-      alt="Academy Logo"
-    />
-  </div>
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-    Academy
-  </span>
-</h2>
+        <section className="text-center md:text-left mb-16 animate-fade-in">
+  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
+    
+    {/* Image on the left */}
+    <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+      <img
+        src="/img/logo.png"
+        className="w-[60%] md:w-[70%] h-auto object-contain"
+        alt="Academy Logo"
+      />
+    </div>
 
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            At Filmaatic Studio, we offer best-in-class training and services in acting, dance, and screen casting. Whether you're a beginner or a seasoned professional, we have something for everyone.
-          </p>
-        </section>
+    {/* Compact Glassmorphic Card */}
+    <div className="w-full md:w-1/2 bg-[rgba(255,255,255,0.1)] backdrop-blur-lg border border-[rgba(255,255,255,0.2)] rounded-xl p-12 shadow-lg transition-all duration-300 hover:bg-[rgba(255,255,255,0.15)] hover:scale-105">
+      <h2 className="text-4xl font-bold mb-3">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+          Our Academy
+        </span>
+      </h2>
+      <p className="text-base text-gray-300 leading-relaxed">
+        At <span className="font-semibold text-white">Filmaatic Studio</span>, we nurture talent and shape future stars with expert training in  
+        <span className="text-pink-400 font-semibold"> acting</span>, <span className="text-purple-400 font-semibold"> dance</span>, and <span className="text-blue-400 font-semibold"> screen casting</span>.
+        <br /><br />
+        Whether you're a beginner or an experienced artist, our top-tier instructors and modern facilities will guide you toward success. 
+        <br /><br />
+        Join us and turn your **artistic dreams into reality!**
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
 
         {/* Acting School Card */}
         <section className="mb-16 animate-fade-in-up">
