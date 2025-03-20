@@ -164,9 +164,9 @@ const Navbar = () => {
       {/* Navbar Content */}
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl text-white hover:text-gray-200 transition-colors duration-300"
+        <Link to="/" className="text-3xl text-white hover:text-gray-200 transition-colors duration-300"
         style={{ fontFamily: "SmileCandy" }}>
-          FILMAATIC
+          Filmaatic
         </Link>
 
         {/* Desktop Menu */}

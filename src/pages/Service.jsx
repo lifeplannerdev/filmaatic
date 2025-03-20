@@ -57,11 +57,14 @@ const Service = () => {
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
   <div className="w-full flex justify-center md:justify-center">
   <h1 className="text-5xl font-bold mb-4 text-center">
+  <span className="font-dancing-script text-7xl font-montserrat" style={{ fontFamily: "SmileCandy", }}> Filmaatic </span>
           
-          <span className="text-5xl font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
-            ACADEMY
+          <span className="text-5xl font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 "
+           >
+            ACADEMICS
           </span>
-          <span className="font-dancing-script text-5xl font-montserrat"> & ACTIVITIES</span>{" "}
+          
+          {" "}
         </h1>
   </div>
 </div>
