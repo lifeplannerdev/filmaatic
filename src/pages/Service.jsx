@@ -56,13 +56,13 @@ const Service = () => {
         >
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-6">
   <div className="w-full flex justify-center md:justify-center">
-    <motion.img
-      src="/img/logo.png"
-      className="w-[80%] md:w-[50%] h-auto object-contain" // 60% on mobile, 50% on larger screens
-      alt="Academy Logo"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-    />
+  <h1 className="text-5xl font-bold mb-4 text-center">
+          
+          <span className="text-5xl font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
+            ACADEMY
+          </span>
+          <span className="font-dancing-script text-5xl font-montserrat"> & ACTIVITIES</span>{" "}
+        </h1>
   </div>
 </div>
         </motion.section>
