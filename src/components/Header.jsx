@@ -21,8 +21,8 @@ const Header = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-[60%] text-white mt-20 mb-10">
         {/* Title with Dancing Script for "FILMAATIC" and Montserrat for "STUDIOS" */}
         <h1 className="text-5xl font-bold mb-4 text-center">
-          <span className="font-dancing-script italic">FILMAATIC</span>{" "}
-          <span className="font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
+          <span className="font-dancing-script italic" style={{ fontFamily: "SmileCandy", }}>FILMAATIC</span>{" "}
+          <span className="text-5xl font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
             STUDIOS
           </span>
         </h1>
