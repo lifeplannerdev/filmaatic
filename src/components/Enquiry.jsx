@@ -50,10 +50,10 @@ const EnquirySection = () => {
             </form>
           </div>
 
-          {/* Icons Section (Right Side) */}
+
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <div className="grid grid-cols-2 gap-4 h-full w-[80%] mx-auto"> {/* Reduced gap and width */}
-              {/* Instagram */}
+
               <a
                 href="https://instagram.com"
                 target="_blank"
@@ -64,7 +64,7 @@ const EnquirySection = () => {
                 <span className="text-sm text-gray-300">Instagram</span>
               </a>
 
-              {/* WhatsApp */}
+
               <a
                 href="https://wa.me/yournumber"
                 target="_blank"
@@ -75,7 +75,7 @@ const EnquirySection = () => {
                 <span className="text-sm text-gray-300">WhatsApp</span>
               </a>
 
-              {/* Phone */}
+
               <a
                 href="tel:+1234567890"
                 className="flex flex-col items-center justify-center p-4 bg-slate-900 rounded-lg hover:bg-slate-700 transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
@@ -84,7 +84,7 @@ const EnquirySection = () => {
                 <span className="text-sm text-gray-300">Phone</span>
               </a>
 
-              {/* Mail */}
+
               <a
                 href="mailto:info@example.com"
                 className="flex flex-col items-center justify-center p-4 bg-slate-900 rounded-lg hover:bg-slate-700 transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/20"
