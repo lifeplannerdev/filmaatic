@@ -36,11 +36,14 @@ const About = () => {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl font-bold text-center mb-8 mt-10"
+            className="text-7xl font-bold text-center mb-8 mt-10"
+            style={{ fontFamily: "SmileCandy", }}
           >
-            Filmaatic...?
+            Filmaatic
           </motion.h1>
+          
         </motion.div>
+        
 
         {/* Mission Section */}
         <motion.section
