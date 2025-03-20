@@ -57,7 +57,7 @@ body {
 
 @font-face {
   font-family: "SmileCandy";
-  src: url("public/font/Cream Cake.otf") format("truetype");
+  src: url("public/font/Cream Cake.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
