@@ -57,7 +57,7 @@ body {
 
 @font-face {
   font-family: "SmileCandy";
-  src: url("public/font/PoetsenOne-Regular.ttf") format("truetype");
+  src: url("public/font/PoetsenOneRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
