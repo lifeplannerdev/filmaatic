@@ -38,7 +38,7 @@ const About = () => {
             variants={fadeInUp}
             className="text-5xl font-bold text-center mb-8 mt-10"
           >
-            ABOUT <span className="text-transparent text-7xl bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500" style={{ fontFamily: "SmileCandy", }}>Filmaatic</span>
+            Filmaatic...?
           </motion.h1>
         </motion.div>
 
