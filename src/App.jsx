@@ -6,6 +6,8 @@ import About from './pages/About';
 import Service from './pages/Service';
 import Footer from './components/Footer';
 import ScreenCast from './pages/ScreenCast';
+import ActingSchool from './pages/ActingSchool';
+import DanceStudio from './pages/DanceStudio';
 
 
 
@@ -28,6 +30,8 @@ export const App = () => {
 
             <Route path="/service" element={<Service />} />
             <Route path="/screencast" element={<ScreenCast />} />
+            <Route path="/actingschool" element={<ActingSchool />} />
+            <Route path="/dancestudio" element={<DanceStudio />} />
 
 
           </Routes>

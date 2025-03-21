@@ -18,14 +18,14 @@ const Cards = () => {
       description: "Master the art of acting with our world-class training programs.",
       image: "/img/movie.png", // Public URL path
       gradient: "bg-gradient-to-br from-pink-600 to-orange-900",
-      path: "/acting-school", // Path to redirect to
+      path: "/actingschool", // Path to redirect to
     },
     {
       title: "Dance School",
       description: "Discover the joy of dance with our expert-led classes.",
       image: "/img/dance.png", // Public URL path
       gradient: "bg-gradient-to-br from-teal-600 to-green-900",
-      path: "/dance-school", // Path to redirect to
+      path: "/dancestudio", // Path to redirect to
     },
   ];
 

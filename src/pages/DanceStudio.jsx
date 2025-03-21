@@ -1,6 +1,6 @@
 import React from "react";
 
-const ScreenCast = () => {
+const DanceStudio = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -22,11 +22,11 @@ const ScreenCast = () => {
         {/* Hero Section with improved typography and fade-in animation */}
         <div className="mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-1">
-            Screen Casting
+            Dance Studio
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">
-            Find your next big role with our <span className="font-semibold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">professional casting services</span>
+            Discover the joy of dance with our <span className="font-semibold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">expert-led classes</span>
           </p>
           
           {/* Decorative divider with fade-in */}
@@ -41,21 +41,21 @@ const ScreenCast = () => {
         <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-8 border border-white/10 shadow-xl animate-fade-in-delay-4">
           <div className="space-y-6">
             <p className="text-lg text-gray-200 leading-relaxed animate-fade-in-delay-5">
-              Step into the <span className="font-bold text-pink-400">spotlight</span> and unlock a world of endless opportunities with our premier casting services! Whether you're a budding talent dreaming of your first break or a seasoned performer ready for your next challenge, we bridge the gap between raw talent and iconic roles.
+              Step into a world of <span className="font-bold text-pink-400">rhythm</span>, <span className="font-bold">creativity</span>, and <span className="font-bold">self-expression</span> at our <span className="font-bold">premier dance studio</span>. Whether you're a <span className="font-bold">beginner</span> or a <span className="font-bold">seasoned dancer</span>, we offer <span className="font-bold">professional training</span> in <span className="font-bold">contemporary</span>, <span className="font-bold">hip-hop</span>, <span className="font-bold">South Indian</span>, and <span className="font-bold">Bollywood dance forms</span> for all ages and genders.
             </p>
 
             <p className="text-lg text-gray-200 leading-relaxed animate-fade-in-delay-6">
-              Our expert casting team connects you with blockbuster feature films, captivating web series, and binge-worthy OTT productions. With a vast casting directory spanning genres and platforms, we ensure directors and producers discover the perfect fit for their visionary projects.
+              Our <span className="font-bold">expert choreographers</span> bring years of experience and passion to every class, helping you master the art of dance. From <span className="font-bold">graceful contemporary moves</span> to the <span className="font-bold">high-energy beats of hip-hop</span>, we offer a <span className="font-bold">spectrum of styles</span> to suit every dancer’s passion.
             </p>
 
             <p className="text-lg text-gray-200 leading-relaxed animate-fade-in-delay-7">
-              Stay ahead with our exclusive casting calls and real-time audition alerts, designed to give you the competitive edge in this fast-paced industry. From gripping dramas to high-energy comedies, our platform opens doors to diverse roles that showcase your unique talent.
+              Beyond classes, we provide <span className="font-bold">choreography services</span> for <span className="font-bold">weddings</span>, <span className="font-bold">competitions</span>, and <span className="font-bold">special events</span>. Our <span className="font-bold">in-house dance team</span> delivers <span className="font-bold">jaw-dropping performances</span> that leave audiences spellbound.
             </p>
             
             {/* Call to action section with fade-in */}
             <div className="mt-10 pt-6 border-t border-white/10 animate-fade-in-delay-8">
               <p className="text-xl font-bold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
-                Your journey to stardom starts here!
+                Your dance journey starts here!
               </p>
               
               <div className="flex justify-center mt-6">
@@ -69,7 +69,7 @@ const ScreenCast = () => {
         
         {/* Footer tagline with fade-in */}
         <p className="text-3xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-9">
-          Lights , Camera , Action ! 
+          Let’s dance our way to greatness! 💃✨
         </p>
       </div>
 
@@ -182,4 +182,4 @@ const ScreenCast = () => {
   );
 };
 
-export default ScreenCast;
+export default DanceStudio;
