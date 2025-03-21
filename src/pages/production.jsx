@@ -267,9 +267,9 @@ const Production = () => {
           animation: fadeInUp 0.8s ease-out 1s forwards;
         }
       `}</style>
-      <ProjectsSection />
-      <Cards />
+      
     </div>
+   
     
   );
 };
