@@ -59,7 +59,7 @@ const Production = () => {
                     Feature Films
                   </h3>
                 </div>
-                <p className="text-gray-300 ml-16">
+                <p className="text-gray-300">
                   Full-length cinematic productions, crafted with powerful storytelling and high production values, providing a real industry experience for emerging talent.
                 </p>
               </div>
@@ -74,7 +74,7 @@ const Production = () => {
                     Ad Films
                   </h3>
                 </div>
-                <p className="text-gray-300 ml-16">
+                <p className="text-gray-300">
                   Visually captivating commercial projects that showcase brands creatively, offering fresh faces an opportunity to shine in the advertising industry.
                 </p>
               </div>
@@ -89,7 +89,7 @@ const Production = () => {
                     Musical Albums
                   </h3>
                 </div>
-                <p className="text-gray-300 ml-16">
+                <p className="text-gray-300">
                   Professionally produced music videos and conceptual performances, integrating acting, choreography, and storytelling into a single artistic vision.
                 </p>
               </div>
@@ -104,7 +104,7 @@ const Production = () => {
                     Web Series
                   </h3>
                 </div>
-                <p className="text-gray-300 ml-16">
+                <p className="text-gray-300">
                   Episodic digital content created specifically for OTT platforms, allowing new actors and filmmakers to break into the fast-growing online entertainment industry.
                 </p>
               </div>
