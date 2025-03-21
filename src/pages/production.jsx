@@ -153,7 +153,7 @@ const Production = () => {
         
       </div>
    
-      <EnquirySection />
+
       
       
 
@@ -269,7 +269,6 @@ const Production = () => {
       `}</style>
       
     </div>
-   
     
   );
 };
