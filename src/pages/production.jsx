@@ -1,4 +1,7 @@
 import React from "react";
+import ProjectsSection from "../components/ProjectSection";
+import Cards from "../components/Cards";
+import EnquirySection from "../components/Enquiry";
 
 const Production = () => {
   return (
@@ -18,23 +21,19 @@ const Production = () => {
       </div>
 
       {/* Content Container with refined spacing */}
-      <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10">
         {/* Hero Section with improved typography and fade-in animation */}
         <div className="mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-1">
-            <span className="text-5xl text-white" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Production
+            <span className="text-5xl text-white" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Productions
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">
-            From <span className="font-semibold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">learning</span> to <span className="font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">performing</span>—turning talent into productions!
+             <span className="font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Turning talent</span> into Productions!
           </p>
           
           {/* Decorative divider with fade-in */}
-          <div className="flex items-center justify-center gap-4 my-8 animate-fade-in-delay-3">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
-            <div className="text-pink-500">🎬</div>
-            <div className="h-px w-16 bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
-          </div>
+
         </div>
 
         {/* Main Content with card-like presentation and sequential fade-in */}
@@ -45,7 +44,7 @@ const Production = () => {
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent animate-fade-in-delay-6">
-              Our expertise spans across:
+              Our expertise :
             </h2>
 
             {/* Production Cards */}
@@ -117,24 +116,47 @@ const Production = () => {
             
             {/* Call to action section with fade-in */}
             <div className="mt-10 pt-6 border-t border-white/10 animate-fade-in-delay-9">
-              <p className="text-xl font-bold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              <p className="text-xl font-bold text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent mb-2">
                 Ready to bring your talent to the screen?
               </p>
               
-              <div className="flex justify-center mt-6">
-                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up">
-                  Join Our Next Production
-                </button>
+              <div className="flex justify-center">
+              <button
+          
+          className="relative overflow-hidden px-6 py-3 text-white text-lg font-medium rounded-lg transition-all duration-500 font-montserrat"
+          style={{
+            background: "linear-gradient(45deg,rgb(227, 180, 12), #69007f, #fc0987)",
+            marginTop: "40px",
+            borderRadius: "30px",
+          }}
+        >
+          <span className="relative z-10">Join Us</span>
+          <span
+            className="absolute inset-1 bg-[#272727] rounded-lg transition-opacity duration-500 opacity-100 hover:opacity-70"
+            style={{ zIndex: 1, borderRadius: "30px" }}
+          ></span>
+          <span
+            className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500"
+            style={{
+              background: "linear-gradient(45deg, #0ce39a, #69007f, #fc0987)",
+              filter: "blur(20px)",
+              zIndex: 0,
+            }}
+          ></span>
+        </button>
               </div>
             </div>
           </div>
         </div>
         
         {/* Footer tagline with fade-in */}
-        <p className="text-2xl text-center2 mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-10">
+        <p className="text-2xl text-center mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-10">
           Lights, Camera, Action!
         </p>
+        
       </div>
+      <ProjectsSection />
+        <Cards />
 
       {/* Enhanced Animation Styles with added fade-in animations */}
       <style jsx>{`

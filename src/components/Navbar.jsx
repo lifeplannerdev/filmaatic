@@ -63,6 +63,9 @@ const Navbar = () => {
           <Link to="/service" className="text-white hover:text-gray-200 transition-colors duration-300">
             Academy
           </Link>
+          <Link to="/productions" className="text-white hover:text-gray-200 transition-colors duration-300">
+            Productions
+          </Link>
           <Link to="mailto:hrlifeplanner@gmail.com" className="text-white hover:text-gray-200 transition-colors duration-300">
             Support
           </Link>
@@ -110,6 +113,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Academy
+            </Link>
+            <Link
+              to="/productions"
+              className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
+              onClick={() => setIsOpen(false)}
+            >
+              Productions
             </Link>
             <Link
               to="mailto:hrlifeplanner@gmail.com"

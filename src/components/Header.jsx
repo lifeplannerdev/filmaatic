@@ -32,7 +32,7 @@ const Header = () => {
 
         {/* Enquire Now Button */}
         <button
-          onClick={scrollToEnquirySection} // Add onClick event
+          onClick={scrollToEnquirySection}
           className="relative overflow-hidden px-6 py-3 text-white text-lg font-medium rounded-lg transition-all duration-500 font-montserrat"
           style={{
             background: "linear-gradient(45deg,rgb(227, 180, 12), #69007f, #fc0987)",
