@@ -68,8 +68,8 @@ const ScreenCast = () => {
         </div>
         
         {/* Footer tagline */}
-        <p className="text-3xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-          Lights, camera, action—your moment is now! 🎬
+        <p className="text-2xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+          Lights, camera, action ! 🎬
         </p>
       </div>
 
