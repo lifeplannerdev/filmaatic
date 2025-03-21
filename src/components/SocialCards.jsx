@@ -75,7 +75,7 @@ const SocialCard = () => {
                 <div className={`text-4xl mr-4 p-3 rounded-full bg-gradient-to-br ${card.gradient} bg-opacity-20 animate-pulse`}>
                   {card.icon}
                 </div>
-                <h3 className={`text-2xl font-bold bg-gradient-to-r ${card.gradient} bg-clip-text text-transparent`}>
+                <h3 className={`text-1xl font-bold bg-gradient-to-r ${card.gradient} bg-clip-text text-transparent`}>
                   {card.title}
                 </h3>
               </div>
