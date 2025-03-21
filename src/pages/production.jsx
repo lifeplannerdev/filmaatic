@@ -44,7 +44,7 @@ const Production = () => {
             </p>
 
             <h2 className="text-2xl font-bold mt-8 mb-4 text-center bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent animate-fade-in-delay-6">
-              Our expertise :
+              OUR EXPERTISE
             </h2>
 
             {/* Production Cards */}
