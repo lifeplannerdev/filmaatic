@@ -1,4 +1,5 @@
 import React from "react";
+import SocialCard from "../components/SocialCards";
 
 const DanceStudio = () => {
   return (
@@ -68,10 +69,9 @@ const DanceStudio = () => {
         </div>
         
         {/* Footer tagline with fade-in */}
-        <p className="text-3xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-9">
-          Let’s dance our way to greatness! 💃✨
-        </p>
+        
       </div>
+      < SocialCard />
 
       {/* Enhanced Animation Styles with added fade-in animations */}
       <style jsx>{`
