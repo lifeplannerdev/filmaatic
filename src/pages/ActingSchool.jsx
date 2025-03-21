@@ -139,10 +139,7 @@ const ActingSchool = () => {
           </div>
         </div>
         
-        {/* Footer tagline with fade-in */}
-        <p className="text-3xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-11">
-          Your journey to stardom begins here!
-        </p>
+    
       </div>
       < SocialCard />
 

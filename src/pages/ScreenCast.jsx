@@ -1,4 +1,5 @@
 import React from "react";
+import SocialCard from "../components/SocialCards";
 
 const ScreenCast = () => {
   return (
@@ -67,10 +68,7 @@ const ScreenCast = () => {
           </div>
         </div>
         
-        {/* Footer tagline with fade-in */}
-        <p className="text-3xl text-center font-bold mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-9">
-          Lights , Camera , Action ! 
-        </p>
+    <SocialCard />
       </div>
 
       {/* Enhanced Animation Styles with added fade-in animations */}
