@@ -62,7 +62,7 @@ const EnquirySection = () => {
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">
-            Let's bring your <span className="font-semibold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">vision to life</span>
+            Let's bring your <span className=" bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">vision to life</span>
           </p>
           
           {/* Decorative divider with fade-in */}
@@ -138,10 +138,7 @@ const EnquirySection = () => {
           </div>
         </div>
         
-        {/* Footer tagline with fade-in */}
-        <p className="text-3xl text-center font-bold mt-16 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-9">
-          Let's Create Something Amazing!
-        </p>
+       
       </div>
 
       {/* Enhanced Animation Styles */}
