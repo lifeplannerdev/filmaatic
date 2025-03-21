@@ -60,7 +60,7 @@ const ScreenCast = () => {
               
               <div className="flex justify-center mt-6">
                 <button className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
-                  Join Our Casting Network
+                  Join Us !!
                 </button>
               </div>
             </div>
