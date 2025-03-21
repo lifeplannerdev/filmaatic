@@ -48,7 +48,7 @@ const SocialCard = () => {
         {/* Hero Section with improved typography and fade-in animation */}
         <div className="mb-16 animate-fade-in">
           <h1 className="text-3xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-1">
-            Connect With Us
+            Connect Us
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">
@@ -95,10 +95,7 @@ const SocialCard = () => {
           ))}
         </div>
         
-        {/* Footer tagline with fade-in */}
-        <p className="text-2xl text-center mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-9">
-          Follow • Share • Connect
-        </p>
+    
       </div>
 
       {/* Enhanced Animation Styles */}
