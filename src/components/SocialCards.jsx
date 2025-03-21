@@ -30,17 +30,16 @@ const SocialCard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
+    <div className="bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs with improved animation */}
         
         {/* Additional subtle gradient elements */}
-        <div className="absolute top-1/4 left-1/3 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(139,92,246,.1),rgba(255,255,255,0))] animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/3 h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(236,72,153,.1),rgba(255,255,255,0))] animate-pulse-slow"></div>
+        <div className="absolute top-1/4 left-1/3 h-[400px] w-[400px] rounded-full bg-transparent animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 h-[300px] w-[300px] rounded-full bg-transparent animate-pulse-slow"></div>
         
-        {/* Fine grain noise overlay for texture */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-30"></div>
+    
       </div>
 
       {/* Content Container with refined spacing */}
@@ -98,7 +97,6 @@ const SocialCard = () => {
     
       </div>
 
-      {/* Enhanced Animation Styles */}
       <style jsx>{`
         @keyframes float {
           0% { transform: translateY(0) rotate(0deg); }

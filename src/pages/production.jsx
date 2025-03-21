@@ -149,12 +149,12 @@ const Production = () => {
           </div>
         </div>
         
-        {/* Footer tagline with fade-in */}
-        <p className="text-2xl text-center mt-12 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-10">
-          Lights, Camera, Action!
-        </p>
+       
         
       </div>
+      <ProjectsSection />
+  
+      
       
 
       {/* Enhanced Animation Styles with added fade-in animations */}

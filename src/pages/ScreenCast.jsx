@@ -68,8 +68,9 @@ const ScreenCast = () => {
           </div>
         </div>
         
-    <SocialCard />
+   
       </div>
+      <SocialCard />
 
       {/* Enhanced Animation Styles with added fade-in animations */}
       <style jsx>{`

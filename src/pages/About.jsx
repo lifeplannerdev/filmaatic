@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Import Framer Motion
+import SocialCard from '../components/SocialCards';
 
 // Animation variants
 const fadeInUp = {
@@ -176,8 +177,7 @@ const About = () => {
           </motion.div>
         </motion.section>
 
-        {/* Team Section */}
-        <motion.section
+        {/* <motion.section
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -190,7 +190,7 @@ const About = () => {
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {/* Team Member 1 */}
+      
             <motion.div
               variants={fadeInUp}
               className="bg-slate-900/50 backdrop-blur-lg p-6 rounded-lg border border-slate-800 hover:border-pink-500 transition-all duration-300"
@@ -204,7 +204,7 @@ const About = () => {
               <p className="text-gray-300">Founder & Creative Director</p>
             </motion.div>
 
-            {/* Team Member 2 */}
+          
             <motion.div
               variants={fadeInUp}
               className="bg-slate-900/50 backdrop-blur-lg p-6 rounded-lg border border-slate-800 hover:border-purple-500 transition-all duration-300"
@@ -218,7 +218,7 @@ const About = () => {
               <p className="text-gray-300">Head of Acting</p>
             </motion.div>
 
-            {/* Team Member 3 */}
+         
             <motion.div
               variants={fadeInUp}
               className="bg-slate-900/50 backdrop-blur-lg p-6 rounded-lg border border-slate-800 hover:border-pink-500 transition-all duration-300"
@@ -232,7 +232,9 @@ const About = () => {
               <p className="text-gray-300">Dance Instructor</p>
             </motion.div>
           </motion.div>
-        </motion.section>
+        </motion.section> */}
+
+        <SocialCard />
       </div>
     </div>
   );
