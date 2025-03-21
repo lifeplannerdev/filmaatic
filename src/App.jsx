@@ -5,6 +5,7 @@ import Home from './pages/Home'; // Import the Home component
 import About from './pages/About';
 import Service from './pages/Service';
 import Footer from './components/Footer';
+import ScreenCast from './pages/ScreenCast';
 
 
 
@@ -26,6 +27,8 @@ export const App = () => {
             <Route path="/about" element={<About />} />
 
             <Route path="/service" element={<Service />} />
+            <Route path="/screencast" element={<ScreenCast />} />
+
 
           </Routes>
         </div>

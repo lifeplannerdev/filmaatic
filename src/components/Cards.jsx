@@ -1,27 +1,38 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const Cards = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const cardData = [
     {
       title: "Casting",
       description: "Find your next big role with our professional casting services.",
       image: "/img/mask.png", // Public URL path
       gradient: "bg-gradient-to-br from-purple-600 to-blue-900",
+      path: "/screencast", // Path to redirect to
     },
     {
       title: "Acting School",
       description: "Master the art of acting with our world-class training programs.",
       image: "/img/movie.png", // Public URL path
       gradient: "bg-gradient-to-br from-pink-600 to-orange-900",
+      path: "/acting-school", // Path to redirect to
     },
     {
       title: "Dance School",
       description: "Discover the joy of dance with our expert-led classes.",
       image: "/img/dance.png", // Public URL path
       gradient: "bg-gradient-to-br from-teal-600 to-green-900",
+      path: "/dance-school", // Path to redirect to
     },
   ];
+
+  // Function to handle button click
+  const handleLearnMoreClick = (path) => {
+    navigate(path); // Navigate to the specified path
+  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mt-20 justify-center">
@@ -53,6 +64,7 @@ const Cards = () => {
             <h2 className="text-2xl font-bold text-white mb-4">{card.title}</h2>
             <p className="text-gray-300 mb-4">{card.description}</p>
             <button
+              onClick={() => handleLearnMoreClick(card.path)} // Add onClick handler
               className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10"
             >
               Learn More
