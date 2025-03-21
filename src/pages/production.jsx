@@ -155,8 +155,7 @@ const Production = () => {
         </p>
         
       </div>
-      <ProjectsSection />
-        <Cards />
+      
 
       {/* Enhanced Animation Styles with added fade-in animations */}
       <style jsx>{`
@@ -268,7 +267,10 @@ const Production = () => {
           animation: fadeInUp 0.8s ease-out 1s forwards;
         }
       `}</style>
+      <ProjectsSection />
+      <Cards />
     </div>
+    
   );
 };
 
