@@ -137,22 +137,22 @@ const EnquirySection = () => {
             </div>
             
             <div className="mt-10 bg-slate-800/30 backdrop-blur-sm border border-white/5 rounded-lg p-6">
-              <h4 className="text-lg font-medium mb-4">Business Hours</h4>
-              <ul className="space-y-2 text-slate-300">
-                <li className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>9:00 AM - 3:30 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
-                </li>
-              </ul>
-            </div>
+  <h4 className="text-lg font-medium mb-4">Business Hours</h4>
+  <ul className="space-y-2 text-slate-300">
+    <li className="flex flex-col sm:flex-row sm:justify-between">
+      <span className="font-medium mb-1 sm:mb-0">Monday - Friday</span>
+      <span>9:00 AM - 6:00 PM</span>
+    </li>
+    <li className="flex flex-col sm:flex-row sm:justify-between">
+      <span className="font-medium mb-1 sm:mb-0">Saturday</span>
+      <span>9:00 AM - 3:30 PM</span>
+    </li>
+    <li className="flex flex-col sm:flex-row sm:justify-between">
+      <span className="font-medium mb-1 sm:mb-0">Sunday</span>
+      <span>Closed</span>
+    </li>
+  </ul>
+</div>
           </div>
         </div>
         
