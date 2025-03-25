@@ -1,8 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const EnquirySection = () => {
-  // Contact method data
+  // State for form data and submission status
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('http://localhost:3000/api/enquiries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
+
+      // Success - reset form and show success message
+      setSubmitStatus({ success: true, message: 'Message sent successfully!' });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitStatus({ 
+        success: false, 
+        message: error.message || 'Failed to send message. Please try again.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Contact method data (unchanged from your original)
   const contactMethods = [
     {
       name: "Instagram",
@@ -53,7 +106,6 @@ const EnquirySection = () => {
       <div className="container mx-auto max-w-5xl relative z-10">
         {/* Section Header */}
         <div className="mb-16 text-center">
- 
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
           <p className="text-slate-300 max-w-md mx-auto">
             Let's collaborate to bring your vision to life. We're just a message away.
@@ -66,15 +118,30 @@ const EnquirySection = () => {
           {/* Contact Form */}
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-xl">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6">
+            
+            {/* Submission status message */}
+            {submitStatus && (
+              <div className={`mb-4 p-4 rounded-lg ${
+                submitStatus.success 
+                  ? 'bg-green-500/10 border border-green-500/20 text-green-500' 
+                  : 'bg-red-500/10 border border-red-500/20 text-red-500'
+              }`}>
+                {submitStatus.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1">Full Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent transition-all"
                   placeholder="John Doe"
+                  required
                 />
               </div>
               <div>
@@ -83,8 +150,11 @@ const EnquirySection = () => {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent transition-all"
                   placeholder="john@example.com"
+                  required
                 />
               </div>
               <div>
@@ -93,23 +163,35 @@ const EnquirySection = () => {
                   id="message"
                   name="message"
                   rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent transition-all"
                   placeholder="Tell us about your project or inquiry..."
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 flex items-center justify-center group"
+                disabled={isSubmitting}
+                className={`w-full px-6 py-3 ${
+                  isSubmitting ? 'bg-indigo-700' : 'bg-indigo-600 hover:bg-indigo-700'
+                } text-white font-medium rounded-lg transition-all shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 flex items-center justify-center group`}
               >
-                <span>Send Message</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                {isSubmitting ? (
+                  'Sending...'
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </>
+                )}
               </button>
             </form>
           </div>
 
-          {/* Contact Methods */}
+          {/* Contact Methods - unchanged from your original */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-8 text-center">Connect With Us</h3>
             
@@ -137,22 +219,22 @@ const EnquirySection = () => {
             </div>
             
             <div className="mt-10 bg-slate-800/30 backdrop-blur-sm border border-white/5 rounded-lg p-6">
-  <h4 className="text-lg font-medium mb-4">Business Hours</h4>
-  <ul className="space-y-2 text-slate-300">
-    <li className="flex flex-col sm:flex-row sm:justify-between">
-      <span className="font-medium mb-1 sm:mb-0">Monday - Friday</span>
-      <span>9:00 AM - 6:00 PM</span>
-    </li>
-    <li className="flex flex-col sm:flex-row sm:justify-between">
-      <span className="font-medium mb-1 sm:mb-0">Saturday</span>
-      <span>9:00 AM - 3:30 PM</span>
-    </li>
-    <li className="flex flex-col sm:flex-row sm:justify-between">
-      <span className="font-medium mb-1 sm:mb-0">Sunday</span>
-      <span>Closed</span>
-    </li>
-  </ul>
-</div>
+              <h4 className="text-lg font-medium mb-4">Business Hours</h4>
+              <ul className="space-y-2 text-slate-300">
+                <li className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="font-medium mb-1 sm:mb-0">Monday - Friday</span>
+                  <span>9:00 AM - 6:00 PM</span>
+                </li>
+                <li className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="font-medium mb-1 sm:mb-0">Saturday</span>
+                  <span>9:00 AM - 3:30 PM</span>
+                </li>
+                <li className="flex flex-col sm:flex-row sm:justify-between">
+                  <span className="font-medium mb-1 sm:mb-0">Sunday</span>
+                  <span>Closed</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         
