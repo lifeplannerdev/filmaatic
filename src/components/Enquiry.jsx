@@ -1,59 +1,15 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
+import toast, { Toaster } from 'react-hot-toast';
 
 const EnquirySection = () => {
-  // State for form data and submission status
+  // State for form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  // Handle form input changes
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch('https://filmaatic-backend-neon.vercel.app/api/enquiries', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Submission failed');
-      }
-
-      // Success - reset form and show success message
-      setSubmitStatus({ success: true, message: 'Message sent successfully!' });
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Submission error:', error);
-      setSubmitStatus({ 
-        success: false, 
-        message: error.message || 'Failed to send message. Please try again.' 
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   // Contact method data (unchanged from your original)
   const contactMethods = [
@@ -95,8 +51,90 @@ const EnquirySection = () => {
     }
   ];
 
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    const toastId = toast.loading('Sending your message...');
+
+    try {
+      const response = await fetch('https://filmaatic-backend-neon.vercel.app/api/enquiries', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Submission failed');
+      }
+
+      // Success - reset form and show success toast
+      setFormData({ name: '', email: '', message: '' });
+      toast.success('Message sent successfully! We\'ll get back to you soon.', { 
+        id: toastId,
+        duration: 4000 
+      });
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error(error.message || 'Failed to send message. Please try again.', { 
+        id: toastId,
+        duration: 4000 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="enquiry-section" className="bg-transparent text-white py-24 px-6 relative overflow-hidden">
+      {/* Toaster component with custom styling */}
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          className: 'bg-white/5 backdrop-blur-md border border-white/10',
+          style: {
+            background: 'rgba(255, 255, 255, 0.05)',
+            color: '#fff',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+            backdropFilter: 'blur(8px)',
+            zIndex: 1000,
+            marginTop:'50px',
+          },
+          success: {
+            iconTheme: {
+              primary: '#4ade80',
+              secondary: '#fff',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#f87171',
+              secondary: '#fff',
+            },
+          },
+          loading: {
+            iconTheme: {
+              primary: '#60a5fa',
+              secondary: '#fff',
+            },
+          }
+        }}
+      />
+
       {/* Subtle background pattern */}
       
       {/* Subtle glow effects */}
@@ -118,17 +156,6 @@ const EnquirySection = () => {
           {/* Contact Form */}
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-xl">
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            
-            {/* Submission status message */}
-            {submitStatus && (
-              <div className={`mb-4 p-4 rounded-lg ${
-                submitStatus.success 
-                  ? 'bg-green-500/10 border border-green-500/20 text-green-500' 
-                  : 'bg-red-500/10 border border-red-500/20 text-red-500'
-              }`}>
-                {submitStatus.message}
-              </div>
-            )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -191,7 +218,7 @@ const EnquirySection = () => {
             </form>
           </div>
 
-          {/* Contact Methods - unchanged from your original */}
+          {/* Contact Methods */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold mb-8 text-center">Connect With Us</h3>
             
