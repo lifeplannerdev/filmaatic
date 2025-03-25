@@ -27,7 +27,7 @@ const EnquirySection = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://localhost:3000/api/enquiries', {
+      const response = await fetch('https://filmaatic-backend-neon.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
