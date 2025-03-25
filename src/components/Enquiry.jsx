@@ -27,7 +27,7 @@ const EnquirySection = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://filmaatic-backend-neon.vercel.app/', {
+      const response = await fetch('https://filmaatic-backend-neon.vercel.app/api/enquiries', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
