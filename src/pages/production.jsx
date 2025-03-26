@@ -277,6 +277,7 @@ const Production = () => {
       `}</style>
       
     </div>
+    <ProjectsSection />
     <EnquirySection />
     </div>
     
