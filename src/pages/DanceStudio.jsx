@@ -1,9 +1,24 @@
 import React from "react";
 import SocialCard from "../components/SocialCards";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+
 
 const DanceStudio = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
+      <ScrollToTop />
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs with improved animation */}

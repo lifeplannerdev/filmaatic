@@ -2,6 +2,20 @@ import React from "react";
 import ProjectsSection from "../components/ProjectSection";
 import Cards from "../components/Cards";
 import EnquirySection from "../components/Enquiry";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+
 
 
 
@@ -9,6 +23,7 @@ const Production = () => {
   return (
     <div>
     <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
+      
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs with improved animation */}
@@ -26,6 +41,7 @@ const Production = () => {
       {/* Content Container with refined spacing */}
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Hero Section with improved typography and fade-in animation */}
+        <ScrollToTop />
         <div className="mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-1">
             <span className="text-5xl text-white" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Productions

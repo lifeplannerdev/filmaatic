@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion'; // Import framer-motion components
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Sample data for projects with a `type` field
 const projects = [
@@ -9,7 +9,7 @@ const projects = [
     description: '2024/Ad',
     image: 'https://i.pinimg.com/736x/88/4b/12/884b12559994f374a6708ac85453db94.jpg',
     link: '#',
-    type: 'adfilm', // Added type
+    type: 'adfilm',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     description: '2023/ Theatre',
     image: 'https://i.pinimg.com/736x/89/95/f2/8995f2aac245134ec3a4a13b669123b3.jpg',
     link: '#',
-    type: 'theatre', // Added type
+    type: 'theatre',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const projects = [
     description: '2023/Ad',
     image: 'https://i.pinimg.com/736x/c9/7e/a1/c97ea10a78625dbe45ed6089ad2b5401.jpg',
     link: '#',
-    type: 'adfilm', // Added type
+    type: 'adfilm',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const projects = [
     description: '2021/Theatre',
     image: 'https://i.pinimg.com/736x/38/d3/de/38d3decf56cfa25a6c908db48ec90030.jpg',
     link: '#',
-    type: 'theatre', // Added type
+    type: 'theatre',
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const projects = [
     description: '2025/theatre',
     image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
     link: '#',
-    type: 'theatre', // Added type
+    type: 'theatre',
   },
   {
     id: 6,
@@ -49,74 +49,56 @@ const projects = [
     description: '2020/Short-film',
     image: '/img/paythuthornaval.webp',
     link: '#',
-    type: 'shortfilm', // Added type
+    type: 'shortfilm',
   },
 ];
 
 const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState('adfilm'); // State to manage active tab
+  const [activeTab, setActiveTab] = useState('films'); // Default to 'films'
 
   // Filter projects based on the active tab
-  const filteredProjects = projects.filter((project) => project.type === activeTab);
+  const filteredProjects = activeTab === 'musicals' 
+    ? projects.filter((project) => project.type === 'theatre')
+    : projects.filter((project) => project.type === 'adfilm' || project.type === 'shortfilm');
 
   return (
-    <section className="py-12 bg-transparent" style={{ marginTop:"-50px", }}>
+    <section className="py-12 bg-transparent" style={{ marginTop:"-50px" }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-white mb-10 mt-10">OUR PROJECTS</h2>
 
         {/* Tabs for filtering */}
         <div className="flex justify-center gap-4 mb-8">
           <button
-            onClick={() => setActiveTab('adfilm')}
-            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
+            onClick={() => setActiveTab('films')}
+            onMouseDown={(e) => e.preventDefault()}
             className={`px-4 py-2 relative ${
-              activeTab === 'adfilm'
-                ? 'text-white' // Active tab text color
-                : 'text-gray-300 hover:text-white' // Inactive tab text color
+              activeTab === 'films'
+                ? 'text-white'
+                : 'text-gray-300 hover:text-white'
             } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
           >
-            Ad Films
-            {/* Active tab underline */}
-            {activeTab === 'adfilm' && (
+            Films
+            {activeTab === 'films' && (
               <motion.span
                 className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
-                layoutId="underline" // Unique ID for the underline animation
+                layoutId="underline"
               />
             )}
           </button>
           <button
-            onClick={() => setActiveTab('theatre')}
-            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
+            onClick={() => setActiveTab('musicals')}
+            onMouseDown={(e) => e.preventDefault()}
             className={`px-4 py-2 relative ${
-              activeTab === 'theatre'
-                ? 'text-white' // Active tab text color
-                : 'text-gray-300 hover:text-white' // Inactive tab text color
+              activeTab === 'musicals'
+                ? 'text-white'
+                : 'text-gray-300 hover:text-white'
             } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
           >
-            Theatre
-            {/* Active tab underline */}
-            {activeTab === 'theatre' && (
+            Musicals
+            {activeTab === 'musicals' && (
               <motion.span
                 className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
-                layoutId="underline" // Unique ID for the underline animation
-              />
-            )}
-          </button>
-          <button
-            onClick={() => setActiveTab('shortfilm')}
-            onMouseDown={(e) => e.preventDefault()} // Prevent focus on mouse down
-            className={`px-4 py-2 relative ${
-              activeTab === 'shortfilm'
-                ? 'text-white' // Active tab text color
-                : 'text-gray-300 hover:text-white' // Inactive tab text color
-            } transition-all duration-300 text-sm sm:text-base focus:outline-none`}
-          >
-            Short Films
-            {/* Active tab underline */}
-            {activeTab === 'shortfilm' && (
-              <motion.span
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-white"
-                layoutId="underline" // Unique ID for the underline animation
+                layoutId="underline"
               />
             )}
           </button>
@@ -125,17 +107,17 @@ const ProjectsSection = () => {
         {/* Project cards */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent"
-          layout // Enable layout animations
+          layout
         >
           <AnimatePresence mode="wait">
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 className="rounded-[25px] overflow-hidden aspect-[3/4] w-full relative"
-                initial={{ opacity: 0, y: 20 }} // Initial animation state
-                animate={{ opacity: 1, y: 0 }} // Animate to this state
-                exit={{ opacity: 0, y: 20 }} // Exit animation state
-                transition={{ duration: 0.3 }} // Animation duration
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
               >
                 {/* Image */}
                 <img

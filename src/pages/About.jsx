@@ -1,6 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import SocialCard from '../components/SocialCards';
+
+// Scroll to top component
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 // Animation variants
 const fadeInUp = {
@@ -13,7 +25,7 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // Stagger animations for child elements
+      staggerChildren: 0.2,
     },
   },
 };
@@ -21,11 +33,8 @@ const staggerContainer = {
 const About = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20 overflow-hidden">
-      {/* Background Gradients */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float"></div>
-        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float-delay"></div>
-      </div>
+      {/* Scroll to top component */}
+      <ScrollToTop />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Page Title */}

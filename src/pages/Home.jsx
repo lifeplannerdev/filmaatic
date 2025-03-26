@@ -5,6 +5,18 @@ import Header from '../components/Header';
 import Cards from '../components/Cards';
 import ProjectsSection from '../components/ProjectSection';
 import EnquirySection from '../components/Enquiry';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 // Animation variants
 const fadeInUp = {
@@ -26,6 +38,7 @@ const Home = () => {
   return (
     <>
       {/* Header Section */}
+      <ScrollToTop />
       <motion.div
         variants={staggerContainer}
         initial="hidden"

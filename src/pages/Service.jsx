@@ -2,6 +2,18 @@ import React from 'react';
 import { FaTheaterMasks, FaFilm, FaDumbbell, FaMicrophone, FaTv, FaAd } from 'react-icons/fa';
 import { FaPhoneAlt, FaWhatsapp, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion'; // Import framer-motion for animations
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const Service = () => {
   // Functions to handle icon clicks
@@ -39,6 +51,7 @@ const Service = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20">
+      <ScrollToTop />
       {/* Background Gradients */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))] animate-float"></div>
