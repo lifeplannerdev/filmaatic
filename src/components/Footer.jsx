@@ -12,10 +12,7 @@ const Footer = () => {
           
           {/* About Section */}
           <div className="text-center md:text-left">
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-indigo-900 to-black rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-rose-900 to-black rounded-full blur-3xl"></div>
-      </div>
+          
             <h3 className="text-2xl font-bold mb-4"><span className="text-4xl" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Studio</h3>
             <p className="text-gray-400">
               Filmaatic Studio is a premier academy offering world-class training in acting, dance, and screen casting. Join us to unleash your potential and achieve your dreams in the entertainment industry.
