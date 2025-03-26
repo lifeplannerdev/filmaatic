@@ -2,6 +2,8 @@ import React from "react";
 import ProjectsSection from "../components/ProjectSection";
 import Cards from "../components/Cards";
 import EnquirySection from "../components/Enquiry";
+import { PiWhatsappLogo } from "react-icons/pi";
+
 
 const Production = () => {
   return (
@@ -128,9 +130,11 @@ const Production = () => {
             background: "linear-gradient(45deg,rgb(227, 180, 12), #69007f, #fc0987)",
             marginTop: "40px",
             borderRadius: "30px",
+            width:"180px"
           }}
         >
-          <span className="relative z-10">Join Us</span>
+          <span className="relative z-10">Join Us
+          </span>
           <span
             className="absolute inset-1 bg-[#272727] rounded-lg transition-opacity duration-500 opacity-100 hover:opacity-70"
             style={{ zIndex: 1, borderRadius: "30px" }}
