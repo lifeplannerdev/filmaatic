@@ -54,7 +54,7 @@ const Cards = () => {
             What <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-rose-400">We Do</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            We craft transformative experiences that transcend traditional boundaries, offering meticulously designed pathways to artistic excellence.
+           
           </p>
         </div>
 
