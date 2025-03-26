@@ -44,7 +44,7 @@ const Footer = () => {
             <ul className="text-gray-400">
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaPhoneAlt className="mr-2" />
-                <a href="tel:+1234567890" className="hover:text-pink-500 transition-all duration-300">+123 456 7890</a>
+                <a href="tel:+1234567890" className="hover:text-pink-500 transition-all duration-300">+91 99462 32437</a>
               </li>
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaEnvelope className="mr-2" />
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaMapMarkerAlt className="mr-2" />
-                <span>123 Film Street, Hollywood, USA</span>
+                <span>Pathadipalam,Edapally,Kochi, Kerala</span>
               </li>
             </ul>
           </div>

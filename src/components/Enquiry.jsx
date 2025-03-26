@@ -216,6 +216,7 @@ const EnquirySection = () => {
                 )}
               </button>
             </form>
+            
           </div>
 
           {/* Contact Methods */}
@@ -266,9 +267,7 @@ const EnquirySection = () => {
         </div>
         
         {/* Footer */}
-        <div className="mt-20 text-center text-slate-400 text-sm">
-          <p>We typically respond to all inquiries within 24 hours.</p>
-        </div>
+        
       </div>
     </section>
   );
