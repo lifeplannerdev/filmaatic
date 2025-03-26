@@ -60,7 +60,7 @@ const ProjectsSection = () => {
   const filteredProjects = projects.filter((project) => project.type === activeTab);
 
   return (
-    <section className="py-12 bg-transparent">
+    <section className="py-12 bg-transparent" style={{ marginTop:"-50px", }}>
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-white mb-10 mt-10">OUR PROJECTS</h2>
 

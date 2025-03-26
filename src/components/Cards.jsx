@@ -1,78 +1,205 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const cardData = [
     {
       title: "Casting",
-      description: "Find your next big role with our professional casting services.",
-      image: "/img/mask.png", // Public URL path
-      gradient: "bg-gradient-to-br from-purple-600 to-blue-900",
-      path: "/screencast", // Path to redirect to
+      description: "Discover exceptional talent through our curated casting services.",
+      image: "/img/mask.png",
+      accentColor: "border-indigo-600",
+      textColor: "text-indigo-400",
+      glareColor: "from-indigo-500/30 to-indigo-600/20",
+      path: "/screencast",
     },
     {
       title: "Acting School",
-      description: "Master the art of acting with our world-class training programs.",
-      image: "/img/movie.png", // Public URL path
-      gradient: "bg-gradient-to-br from-pink-600 to-orange-900",
-      path: "/actingschool", // Path to redirect to
+      description: "Elevate your craft with our prestigious acting masterclasses.",
+      image: "/img/movie.png",
+      accentColor: "border-rose-600",
+      textColor: "text-rose-400",
+      glareColor: "from-rose-500/30 to-rose-600/20",
+      path: "/actingschool",
     },
     {
-      title: "Dance School",
-      description: "Discover the joy of dance with our expert-led classes.",
-      image: "/img/dance.png", // Public URL path
-      gradient: "bg-gradient-to-br from-teal-600 to-green-900",
-      path: "/dancestudio", // Path to redirect to
+      title: "Dance Studio",
+      description: "Choreograph your artistic journey with our elite dance programs.",
+      image: "/img/dance.png",
+      accentColor: "border-emerald-600",
+      textColor: "text-emerald-400",
+      glareColor: "from-emerald-500/30 to-emerald-600/20",
+      path: "/dancestudio",
     },
   ];
 
-  // Function to handle button click
   const handleLearnMoreClick = (path) => {
-    navigate(path); // Navigate to the specified path
+    navigate(path);
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 mt-20 justify-center">
-      {cardData.map((card, index) => (
-        <Tilt
-          key={index}
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
-          perspective={1000}
-          scale={1.05}
-          transitionSpeed={500}
-          className="rounded-[25px] p-6 border border-[rgba(255,255,255,0.1)] shadow-lg w-[95%] mx-auto backdrop-blur-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-300"
-        >
-          {/* Gradient Overlay */}
-          <div
-            className={`absolute inset-0 ${card.gradient} opacity-20 rounded-[25px] -z-10`}
-          ></div>
+    <section className="py-24 px-6 bg-transparent from-slate-900 to-slate-800 relative overflow-hidden">
+      {/* Subtle decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-transparent from-indigo-500 to-purple-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-transparent from-emerald-500 to-teal-500 rounded-full blur-3xl"></div>
+      </div>
 
-          {/* Card Content */}
-          <div className="text-center">
-            {/* Image */}
-            <div className="flex justify-center mb-4">
-              <img
-                src={card.image} // Use the public URL path
-                alt={card.title}
-                className="w-20 h-20 object-contain" // Adjust size as needed
-              />
-            </div>
-            <h2 className="text-2xl font-bold text-white mb-4">{card.title}</h2>
-            <p className="text-gray-300 mb-4">{card.description}</p>
-            <button
-              onClick={() => handleLearnMoreClick(card.path)} // Add onClick handler
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10"
+      <div className="container mx-auto max-w-6xl relative z-10">
+        {/* Sophisticated Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extralight tracking-tight text-white mb-6">
+            What <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-rose-400">We Do</span>
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            We craft transformative experiences that transcend traditional boundaries, offering meticulously designed pathways to artistic excellence.
+          </p>
+        </div>
+
+        {/* Elegant Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {cardData.map((card, index) => (
+            <Tilt
+              key={index}
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+              perspective={1500}
+              scale={1.05}
+              transitionSpeed={600}
+              className="group h-full"
             >
-              Learn More
-            </button>
-          </div>
-        </Tilt>
-      ))}
-    </div>
+              <div className={`
+                relative 
+                h-full
+                flex
+                flex-col
+                bg-slate-800/60 
+                backdrop-blur-lg 
+                rounded-2xl 
+                border 
+                ${card.accentColor}
+                border-opacity-20
+                hover:border-opacity-50
+                transition-all
+                duration-500
+                overflow-hidden
+                shadow-2xl
+                group-hover:shadow-xl
+                group-hover:translate-y-[-10px]
+              `}>
+                {/* Gradient Glare Overlay */}
+                <div className={`
+                  absolute 
+                  inset-0 
+                  opacity-0 
+                  group-hover:opacity-50 
+                  transition-opacity 
+                  duration-500 
+                  bg-gradient-to-br 
+                  ${card.glareColor}
+                  pointer-events-none
+                  z-20
+                `}></div>
+
+                {/* Subtle Gradient Overlay */}
+                <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br from-white to-transparent"></div>
+
+                <div className="p-10 text-center relative z-10 flex flex-col flex-grow">
+                  {/* Animated Icon Container */}
+                  <div className={`
+                    w-24 
+                    h-24 
+                    mx-auto 
+                    mb-6 
+                    flex 
+                    items-center 
+                    justify-center 
+                    rounded-full 
+                    bg-slate-700/50 
+                    border 
+                    ${card.accentColor}
+                    border-opacity-30
+                    group-hover:scale-110
+                    transition-all
+                    duration-500
+                  `}>
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="w-16 h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className={`
+                    text-3xl 
+                    font-light 
+                    tracking-tight 
+                    mb-4 
+                    ${card.textColor}
+                    group-hover:text-opacity-100
+                  `}>
+                    {card.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-slate-300 mb-8 text-base leading-relaxed flex-grow">
+                    {card.description}
+                  </p>
+
+                  {/* Sophisticated Button */}
+                  <div className="mt-auto">
+                    <button
+                      onClick={() => handleLearnMoreClick(card.path)}
+                      className={`
+                        px-8 
+                        py-3 
+                        rounded-full 
+                        text-sm 
+                        font-medium 
+                        tracking-wider 
+                        uppercase 
+                        transition-all 
+                        duration-500 
+                        ${card.textColor}
+                        border 
+                        ${card.accentColor}
+                        border-opacity-30
+                        hover:border-opacity-100
+                        bg-slate-800/30
+                        hover:bg-slate-700/50
+                        hover:shadow-lg
+                        group/button
+                      `}
+                    >
+                      <span className="flex items-center">
+                        Explore 
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          className="h-4 w-4 ml-2 group-hover/button:translate-x-1 transition-transform" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </Tilt>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

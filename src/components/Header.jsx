@@ -18,7 +18,7 @@ const Header = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-[60%] text-white mt-20 mb-10">
+      <div className="relative z-10 flex flex-col items-center justify-center h-[60%] text-white mb-10" style={{ marginTop:"130px", }}>
         {/* Title with Dancing Script for "FILMAATIC" and Montserrat for "STUDIOS" */}
         <h1 className="text-5xl font-bold mb-4 text-center">
           <span className="font-dancing-script text-7xl" style={{ fontFamily: "SmileCandy", }}>Filmaatic</span>{" "}
