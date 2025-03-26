@@ -2,11 +2,12 @@ import React from "react";
 import ProjectsSection from "../components/ProjectSection";
 import Cards from "../components/Cards";
 import EnquirySection from "../components/Enquiry";
-import { PiWhatsappLogo } from "react-icons/pi";
+
 
 
 const Production = () => {
   return (
+    <div>
     <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -150,12 +151,15 @@ const Production = () => {
         </button>
               </div>
             </div>
+            
           </div>
+          
         </div>
         
        
         
       </div>
+      
    
 
       
@@ -272,6 +276,8 @@ const Production = () => {
         }
       `}</style>
       
+    </div>
+    <EnquirySection />
     </div>
     
   );
