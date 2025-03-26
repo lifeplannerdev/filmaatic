@@ -16,7 +16,7 @@ const EnquirySection = () => {
     {
       name: "Instagram",
       icon: <FaInstagram className="w-6 h-6" />,
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/filmaatic_productions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       color: "text-pink-500",
       bgColor: "bg-pink-500/10",
       borderColor: "border-pink-500/20",
@@ -25,7 +25,7 @@ const EnquirySection = () => {
     {
       name: "WhatsApp",
       icon: <FaWhatsapp className="w-6 h-6" />,
-      href: "https://wa.me/yournumber",
+      href: "https://wa.me/+919946232437",
       color: "text-green-500",
       bgColor: "bg-green-500/10",
       borderColor: "border-green-500/20",
@@ -34,7 +34,7 @@ const EnquirySection = () => {
     {
       name: "Phone",
       icon: <FaPhone className="w-6 h-6" />,
-      href: "tel:+1234567890",
+      href: "tel:+919946232437",
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
       borderColor: "border-blue-500/20",
@@ -43,7 +43,7 @@ const EnquirySection = () => {
     {
       name: "Email",
       icon: <FaEnvelope className="w-6 h-6" />,
-      href: "mailto:info@example.com",
+      href: "mailto:filmaaticproduction@gmail.com",
       color: "text-amber-500",
       bgColor: "bg-amber-500/10",
       borderColor: "border-amber-500/20",
