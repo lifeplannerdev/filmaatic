@@ -113,7 +113,7 @@ const ProjectsSection = () => {
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                className="rounded-[25px] overflow-hidden aspect-[3/4] w-full relative"
+                className="rounded-[15px] overflow-hidden aspect-[3/4] w-full relative"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
