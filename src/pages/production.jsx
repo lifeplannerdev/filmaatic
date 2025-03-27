@@ -141,30 +141,34 @@ const Production = () => {
               
               <div className="flex justify-center">
               <button
-          
-          className="relative overflow-hidden px-6 py-3 text-white text-lg font-medium rounded-lg transition-all duration-500 font-montserrat"
-          style={{
-            background: "linear-gradient(45deg,rgb(227, 180, 12), #69007f, #fc0987)",
-            marginTop: "40px",
-            borderRadius: "30px",
-            width:"180px"
-          }}
-        >
-          <span className="relative z-10">Join Us
-          </span>
-          <span
-            className="absolute inset-1 bg-[#272727] rounded-lg transition-opacity duration-500 opacity-100 hover:opacity-70"
-            style={{ zIndex: 1, borderRadius: "30px" }}
-          ></span>
-          <span
-            className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500"
-            style={{
-              background: "linear-gradient(45deg, #0ce39a, #69007f, #fc0987)",
-              filter: "blur(20px)",
-              zIndex: 0,
-            }}
-          ></span>
-        </button>
+  onClick={() => {
+    const enquirySection = document.getElementById('enquiry-section');
+    if (enquirySection) {
+      enquirySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+  className="relative overflow-hidden px-6 py-3 text-white text-lg font-medium rounded-lg transition-all duration-500 font-montserrat"
+  style={{
+    background: "linear-gradient(45deg,rgb(227, 180, 12), #69007f, #fc0987)",
+    marginTop: "40px",
+    borderRadius: "30px",
+    width: "180px"
+  }}
+>
+  <span className="relative z-10">Join Us</span>
+  <span
+    className="absolute inset-1 bg-[#272727] rounded-lg transition-opacity duration-500 opacity-100 hover:opacity-70"
+    style={{ zIndex: 1, borderRadius: "30px" }}
+  ></span>
+  <span
+    className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-500"
+    style={{
+      background: "linear-gradient(45deg, #0ce39a, #69007f, #fc0987)",
+      filter: "blur(20px)",
+      zIndex: 0,
+    }}
+  ></span>
+</button>
               </div>
             </div>
             

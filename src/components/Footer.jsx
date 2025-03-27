@@ -1,8 +1,8 @@
 
-
-
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaSquareThreads } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -19,24 +19,24 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links Section */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
-            <ul className="text-gray-400">
-              <li className="mb-2">
-                <a href="#acting" className="hover:text-pink-500 transition-all duration-300">Acting School</a>
-              </li>
-              <li className="mb-2">
-                <a href="#dance" className="hover:text-pink-500 transition-all duration-300">Dance Studio</a>
-              </li>
-              <li className="mb-2">
-                <a href="#casting" className="hover:text-pink-500 transition-all duration-300">Screen Casting</a>
-              </li>
-              <li className="mb-2">
-                <a href="#contact" className="hover:text-pink-500 transition-all duration-300">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+         {/* Quick Links Section */}
+<div className="text-center">
+  <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
+  <ul className="text-gray-400">
+    <li className="mb-2">
+      <Link to="/actingschool" className="hover:text-pink-500 transition-all duration-300">Acting School</Link>
+    </li>
+    <li className="mb-2">
+      <Link to="/dancestudio" className="hover:text-pink-500 transition-all duration-300">Dance Studio</Link>
+    </li>
+    <li className="mb-2">
+      <Link to="/screencast" className="hover:text-pink-500 transition-all duration-300">Screen Casting</Link>
+    </li>
+    <li className="mb-2">
+      <Link to="mailto:hrlifeplanner@gmail.com" className="hover:text-pink-500 transition-all duration-300">Contact Us</Link>
+    </li>
+  </ul>
+</div>
 
           {/* Contact Information Section */}
           <div className="text-center md:text-right">
@@ -44,7 +44,7 @@ const Footer = () => {
             <ul className="text-gray-400">
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaPhoneAlt className="mr-2" />
-                <a href="tel:+1234567890" className="hover:text-pink-500 transition-all duration-300">+91 99462 32437</a>
+                <a href="tel:+919946232437" className="hover:text-pink-500 transition-all duration-300">+91 99462 32437</a>
               </li>
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaEnvelope className="mr-2" />
@@ -61,7 +61,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex justify-center space-x-6 mt-8">
           <a
-            href="https://facebook.com/filmaatic"
+            href="https://www.facebook.com/Filmaatic/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-all duration-300"
@@ -69,15 +69,15 @@ const Footer = () => {
             <FaFacebook className="text-2xl" />
           </a>
           <a
-            href="https://twitter.com/filmaatic"
+            href="https://www.threads.net/@filmaatic_productions"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-all duration-300"
           >
-            <FaTwitter className="text-2xl" />
+            <FaSquareThreads className="text-2xl" />
           </a>
           <a
-            href="https://linkedin.com/company/filmaatic"
+            href="https://www.linkedin.com/in/f-i-f-a-c-bbb685250/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-all duration-300"
@@ -85,7 +85,7 @@ const Footer = () => {
             <FaLinkedin className="text-2xl" />
           </a>
           <a
-            href="https://youtube.com/filmaatic"
+            href="www.youtube.com/@filmaaticproductions1494"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-all duration-300"

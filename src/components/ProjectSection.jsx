@@ -132,9 +132,9 @@ const ProjectsSection = () => {
                   <p className="text-sm text-gray-200 mb-4">{project.description}</p>
                   <a
                     href={project.link}
-                    className="inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10 text-sm sm:text-base w-[100%]"
+                    className="text-center inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10 text-sm sm:text-base w-[100%]"
                   >
-                    Watch Trailer
+                    Watch
                   </a>
                 </div>
               </motion.div>
