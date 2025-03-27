@@ -15,6 +15,7 @@ const ScrollToTop = () => {
 
 const ScreenCast = () => {
   return (
+    <div>
     <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       <ScrollToTop />
       {/* Enhanced Background Elements */}
@@ -73,9 +74,7 @@ const ScreenCast = () => {
               </p>
               
               <div className="flex justify-center mt-6">
-                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up">
-                  Join Us !!
-                </button>
+                
               </div>
             </div>
           </div>
@@ -83,7 +82,7 @@ const ScreenCast = () => {
         
    
       </div>
-      <SocialCard />
+      
 
       {/* Enhanced Animation Styles with added fade-in animations */}
       <style jsx>{`
@@ -190,6 +189,8 @@ const ScreenCast = () => {
           animation: fadeInUp 0.8s ease-out 1s forwards;
         }
       `}</style>
+    </div>
+    <SocialCard />
     </div>
   );
 };
