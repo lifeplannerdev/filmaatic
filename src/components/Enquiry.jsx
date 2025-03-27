@@ -83,7 +83,7 @@ const EnquirySection = () => {
 
       // Success - reset form and show success toast
       setFormData({ name: '', email: '', message: '' });
-      toast.success('Message sent successfully! We\'ll get back to you soon.', { 
+      toast.success(' We\'ll get back to you soon.', { 
         id: toastId,
         duration: 4000 
       });
