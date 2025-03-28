@@ -89,19 +89,18 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState('films'); // Default to 'films'
+  const [activeTab, setActiveTab] = useState('films');
 
-  // Filter projects based on the active tab
   const filteredProjects = activeTab === 'musicals' 
     ? projects.filter((project) => project.type === 'theatre')
     : projects.filter((project) => project.type === 'adfilm' || project.type === 'shortfilm');
 
   return (
     <section className="py-12 bg-transparent" style={{ marginTop:"-50px" }}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl"> 
         <h2 className="text-3xl font-bold text-center text-white mb-10 mt-10">OUR PROJECTS</h2>
 
-        {/* Tabs for filtering */}
+        {/* Tabs for filtering (unchanged) */}
         <div className="flex justify-center gap-4 mb-8">
           <button
             onClick={() => setActiveTab('films')}
@@ -141,7 +140,7 @@ const ProjectsSection = () => {
 
         {/* Project cards */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-transparent"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-transparent" 
           layout
         >
           <AnimatePresence mode="wait">
@@ -164,7 +163,7 @@ const ProjectsSection = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-4 sm:p-6">
                   <p className="text-sm text-white mb-2">{project.title}</p>
-                  <p className="text-sm text-gray-200 mb-4">{project.description}</p>
+                  <p className="text-xs text-gray-200 mb-4">{project.description}</p>
                   <a
                     href={project.link}
                     className="text-center inline-block px-3 py-1 sm:px-4 sm:py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-all duration-300 backdrop-blur-lg border border-white/10 text-sm sm:text-base w-[100%]"
