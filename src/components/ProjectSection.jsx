@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     title: 'Canvas',
     description: '2021 / Short-Film',
-    image: '/img/canvas.png',
+    image: '/img/canvas2.png',
     link: 'https://youtu.be/EBli6KsEHfY?si=jr006_QW9w50Vv8J',
     type: 'shortfilm',
   },
