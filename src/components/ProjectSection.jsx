@@ -21,6 +21,23 @@ const projects = [
   },
   {
     id: 3,
+    title: 'Sadhya',
+    description: '2016 / Short-Film',
+    image: '/img/sadhya.jpg',
+    link: 'https://youtu.be/zCTGAh53trE?si=8oY6b6X6DalqgVdx',
+    type: 'shortfilm',
+  },
+  {
+    id: 4,
+    title: 'India Ka RaGa',
+    description: '2016 /Album',
+    image: '/img/raga.jpg',
+    link: 'https://youtu.be/LSeFGQSZlBo?si=quUTMg-IOUi4kW2b',
+    type: 'theatre',
+  },
+  
+  {
+    id: 4,
     title: 'F.L.A.G.-Ad ',
     description: '2025/Ad',
     image: '/img/flag.png',
@@ -28,15 +45,15 @@ const projects = [
     type: 'adfilm',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Hrudaya Malhar',
-    description: '2021/Theatre',
+    description: '2021/Album',
     image: '/img/hrudaya.jpg',
     link: 'https://youtu.be/oK30lqPjHgk?si=ECqrPQrbb0kA7OiL',
     type: 'theatre',
   },
   {
-    id: 5,
+    id:  6,
     title: 'Bloodline',
     description: '2025/theatre',
     image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
@@ -44,12 +61,20 @@ const projects = [
     type: 'shortfilm',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Paythu Thornaval',
-    description: '2022/Short-film',
+    description: '2022/Album',
     image: '/img/paythuthornaval.webp',
     link: 'https://youtu.be/piVp-2_wFpI?si=zu1_TH8eBd_D_a-C',
     type: 'theatre',
+  },
+  {
+    id: 8,
+    title: 'Life Planner-Ad',
+    description: '2024/ad-film',
+    image: '/img/lpad.jpg',
+    link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
+    type: 'shortfilm',
   },
 ];
 
