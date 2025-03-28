@@ -16,7 +16,7 @@ const ScrollToTop = () => {
 const ScreenCast = () => {
   return (
     <div>
-    <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
+    <div className="bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       <ScrollToTop />
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">

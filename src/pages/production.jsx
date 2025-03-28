@@ -22,7 +22,7 @@ const ScrollToTop = () => {
 const Production = () => {
   return (
     <div>
-    <div className="min-h-screen bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
+    <div className="bg-slate-950 text-white py-20 px-6 relative overflow-hidden">
       
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
