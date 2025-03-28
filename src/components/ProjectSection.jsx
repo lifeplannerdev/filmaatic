@@ -5,28 +5,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 const projects = [
   {
     id: 1,
-    title: 'Assamayam',
-    description: '2020/Short-Film',
-    image: '/img/asamayam.jpg',
-    link: '#',
-    type: 'shortfilm',
-  },
-  {
-    id: 2,
-    title: 'Canvas',
-    description: '2021 / Short-Film',
-    image: '/img/canvas2.png',
-    link: 'https://youtu.be/EBli6KsEHfY?si=jr006_QW9w50Vv8J',
-    type: 'shortfilm',
-  },
-  {
-    id: 3,
     title: 'Sadhya',
     description: '2016 / Short-Film',
     image: '/img/sadhya.jpg',
     link: 'https://youtu.be/zCTGAh53trE?si=8oY6b6X6DalqgVdx',
     type: 'shortfilm',
   },
+  {
+    id: 2,
+    title: 'Assamayam',
+    description: '2020/Short-Film',
+    image: '/img/asamayam.jpg',
+    link: 'https://youtu.be/_cr8oA2PrzQ?si=xMF7Qqzk77f1bhHK',
+    type: 'shortfilm',
+  },
+  
+  {
+    id: 3,
+    title: 'Canvas',
+    description: '2021 / Short-Film',
+    image: '/img/canvas3.jpg',
+    link: 'https://youtu.be/EBli6KsEHfY?si=jr006_QW9w50Vv8J',
+    type: 'shortfilm',
+  },
+  
   {
     id: 4,
     title: 'India Ka RaGa',
@@ -37,7 +39,7 @@ const projects = [
   },
   
   {
-    id: 4,
+    id: 5,
     title: 'F.L.A.G.-Ad ',
     description: '2025/Ad',
     image: '/img/flag.png',
@@ -45,7 +47,7 @@ const projects = [
     type: 'adfilm',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Hrudaya Malhar',
     description: '2021/Album',
     image: '/img/hrudaya.jpg',
@@ -53,7 +55,7 @@ const projects = [
     type: 'theatre',
   },
   {
-    id:  6,
+    id:  7,
     title: 'Bloodline',
     description: '2025/theatre',
     image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
@@ -61,7 +63,7 @@ const projects = [
     type: 'shortfilm',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Paythu Thornaval',
     description: '2022/Album',
     image: '/img/paythuthornaval.webp',
@@ -69,11 +71,19 @@ const projects = [
     type: 'theatre',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Life Planner-Ad',
     description: '2024/ad-film',
     image: '/img/lpad.jpg',
     link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
+    type: 'shortfilm',
+  },
+  {
+    id: 10,
+    title: 'Big-Brand',
+    description: '2020/Ad-Film',
+    image: '/img/bb1.jpg',
+    link: 'https://youtu.be/O3HfrDPumEo?si=cATl2RoUtU9JyPe2',
     type: 'shortfilm',
   },
 ];
