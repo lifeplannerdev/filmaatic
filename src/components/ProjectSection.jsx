@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Assamayam',
+    title: 'Asamayam',
     description: '2020/ Short-Film',
     image: '/img/asamayam.jpg',
     link: 'https://youtu.be/_cr8oA2PrzQ?si=xMF7Qqzk77f1bhHK',
