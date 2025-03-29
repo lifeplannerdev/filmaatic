@@ -44,7 +44,7 @@ const Production = () => {
         <ScrollToTop />
         <div className="mb-16 animate-fade-in">
           <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate-fade-in-delay-1">
-            <span className="text-5xl text-white" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Productions
+             F.I.F.A.C.
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">

@@ -8,6 +8,7 @@ import EnquirySection from '../components/Enquiry';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -48,7 +49,9 @@ const Home = () => {
         <motion.div variants={fadeInUp}>
           <Header />
         </motion.div>
+        
       </motion.div>
+      
 
       {/* Cards Section */}
       <motion.div
@@ -59,6 +62,7 @@ const Home = () => {
       >
         <motion.div variants={fadeInUp}>
           <Cards />
+          
         </motion.div>
       </motion.div>
 

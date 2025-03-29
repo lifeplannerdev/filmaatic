@@ -1,6 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { useNavigate } from "react-router-dom";
+import ModernHeader from "./Header2";
 
 const Cards = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const Cards = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-transparent from-slate-900 to-slate-800 relative overflow-hidden">
+    <section className="py-24 px-6 bg-transparent from-slate-900 to-slate-800 relative overflow-hidden" style={{marginBottom:"-50px"}}>
       {/* Subtle decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-transparent from-indigo-500 to-purple-500 rounded-full blur-3xl"></div>
@@ -196,7 +197,9 @@ const Cards = () => {
             </Tilt>
           ))}
         </div>
+        <ModernHeader />
       </div>
+      
     </section>
   );
 };

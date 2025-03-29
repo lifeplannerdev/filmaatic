@@ -49,7 +49,7 @@ const Navbar = () => {
           className="text-3xl text-white hover:text-gray-200 transition-colors duration-300"
           style={{ fontFamily: "SmileCandy" }}
         >
-          Filmaatic
+          Filmaatic Productions
         </Link>
 
         {/* Desktop Menu */}
@@ -61,7 +61,7 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/service" className="text-white hover:text-gray-200 transition-colors duration-300">
-            Academy
+            School
           </Link>
           <Link to="/productions" className="text-white hover:text-gray-200 transition-colors duration-300">
             Productions
@@ -112,7 +112,7 @@ const Navbar = () => {
               className="block py-3 px-4 text-white hover:bg-gray-800 transition-colors duration-300 rounded-[25px]"
               onClick={() => setIsOpen(false)}
             >
-              Academy
+              School
             </Link>
             <Link
               to="/productions"

@@ -20,10 +20,10 @@ const Header = () => {
       {/* Hero Section */}
       <div className="relative z-10 flex flex-col items-center justify-center h-[60%] text-white mb-10" style={{ marginTop:"130px", }}>
         {/* Title with Dancing Script for "FILMAATIC" and Montserrat for "STUDIOS" */}
-        <h1 className="text-5xl font-bold mb-4 text-center">
+        <h1 className="text-5xl font-semibold mb-4 text-center">
           <span className="font-dancing-script text-7xl" style={{ fontFamily: "SmileCandy", }}>Filmaatic</span>{" "}
           <span className="text-5xl  gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500">
-            STUDIOS
+          Productions
           </span>
         </h1>
         <p className="text-lg text-gray-300 font-montserrat">
