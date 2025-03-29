@@ -27,7 +27,7 @@ const Header = () => {
           </span>
         </h1>
         <p className="text-lg text-gray-300 font-montserrat">
-          Crafting Stars in Acting and Dance.
+          Filmaatic Institute of Fashion And Cinema.
         </p>
 
         {/* Enquire Now Button */}

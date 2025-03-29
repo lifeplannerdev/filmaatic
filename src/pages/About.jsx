@@ -70,7 +70,7 @@ const About = () => {
         >
           <motion.div variants={fadeInUp}>
             <p className="text-lg text-gray-300 leading-relaxed text-center max-w-2xl mx-auto p-6 bg-slate-900/50 backdrop-blur-lg rounded-lg border border-slate-800">
-              At Filmaatic Studio, our mission is to empower aspiring artists by providing world-class training in acting, dance, and performance arts. We believe in nurturing creativity, building confidence, and preparing our students for success in the entertainment industry. Whether you're dreaming of the silver screen, the stage, or the dance floor, we're here to help you shine.
+              At F.I.F.A.C. our mission is to empower aspiring artists by providing world-class training in acting, dance, and performance arts. We believe in nurturing creativity, building confidence, and preparing our students for success in the entertainment industry. Whether you're dreaming of the silver screen, the stage, or the dance floor, we're here to help you shine.
             </p>
           </motion.div>
         </motion.section>

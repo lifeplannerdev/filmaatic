@@ -74,7 +74,7 @@ const Service = () => {
           
           <span className="text-5xl font-montserrat gradient-shimmer text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-red-500 "
            >
-            ACADEMICS
+            SCHOOL
           </span>
           
           {" "}

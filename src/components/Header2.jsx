@@ -61,7 +61,7 @@ const ModernHeader = () => {
               <img 
                 src="/img/logo.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-[60%] max-w-md object-contain 
+                className="relative h-auto w-[55%] max-w-md object-contain 
                   transform transition-all duration-500 
                   hover:scale-102 rounded-lg z-10"
               />

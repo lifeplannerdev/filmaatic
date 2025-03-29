@@ -48,7 +48,7 @@ const Production = () => {
           </h1>
           
           <p className="text-2xl text-center text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-delay-2">
-             <span className="font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Turning talent</span> into Productions!
+             <span className="font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Filmaatic </span> Institute of Fashion And Cinema.
           </p>
           
           {/* Decorative divider with fade-in */}
