@@ -1,6 +1,6 @@
 // pages/Home.jsx
 import React from 'react';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Cards from '../components/Cards';
 import ProjectsSection from '../components/ProjectSection';
@@ -46,13 +46,11 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.div variants={fadeInUp}>
-          <Header />
-        </motion.div>
+        
         
       </motion.div>
       
-
+      
       {/* Cards Section */}
       <motion.div
         variants={staggerContainer}
