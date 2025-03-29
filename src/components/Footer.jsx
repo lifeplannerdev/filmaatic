@@ -85,7 +85,7 @@ const Footer = () => {
             <FaLinkedin className="text-2xl" />
           </a>
           <a
-            href="www.youtube.com/@filmaaticproductions1494"
+            href="https://www.youtube.com/@filmaaticproductions1494"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-pink-500 transition-all duration-300"
