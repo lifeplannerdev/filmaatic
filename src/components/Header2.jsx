@@ -32,7 +32,7 @@ const ModernHeader = () => {
   ];
 
   return (
-    <section className="relative bg-transparent text-white overflow-hidden" style={{marginBottom:"-100px"}}>
+    <section className="relative bg-transparent text-white overflow-hidden" style={{marginBottom:"-120px"}}>
       <div className="absolute inset-0 z-0 opacity-30 pointer-events-none overflow-hidden">
         {/* Top-right large purple flare */}
         
@@ -61,7 +61,7 @@ const ModernHeader = () => {
               <img 
                 src="/img/logo.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-[65%] max-w-md object-contain 
+                className="relative h-auto w-[60%] max-w-md object-contain 
                   transform transition-all duration-500 
                   hover:scale-102 rounded-lg z-10"
               />

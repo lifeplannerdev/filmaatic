@@ -251,15 +251,15 @@ const EnquirySection = () => {
               <ul className="space-y-2 text-slate-300">
                 <li className="flex flex-col sm:flex-row sm:justify-between">
                   <span className="font-medium mb-1 sm:mb-0">Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span className="text-green-500">9:00 AM - 6:00 PM</span>
                 </li>
                 <li className="flex flex-col sm:flex-row sm:justify-between">
                   <span className="font-medium mb-1 sm:mb-0">Saturday</span>
-                  <span>9:00 AM - 3:30 PM</span>
+                  <span className="text-green-500">9:00 AM - 3:30 PM</span>
                 </li>
                 <li className="flex flex-col sm:flex-row sm:justify-between">
                   <span className="font-medium mb-1 sm:mb-0">Sunday</span>
-                  <span>Closed</span>
+                  <span className="text-red-500">Closed</span>
                 </li>
               </ul>
             </div>

@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     title: 'Assamayam',
-    description: '2020/Short-Film',
+    description: '2020/ Short-Film',
     image: '/img/asamayam.jpg',
     link: 'https://youtu.be/_cr8oA2PrzQ?si=xMF7Qqzk77f1bhHK',
     type: 'shortfilm',
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 4,
     title: 'India Ka RaGa',
-    description: '2016 /Album',
+    description: '2016 / Album',
     image: '/img/raga.jpg',
     link: 'https://youtu.be/LSeFGQSZlBo?si=quUTMg-IOUi4kW2b',
     type: 'theatre',
@@ -41,7 +41,7 @@ const projects = [
   {
     id: 5,
     title: 'F.L.A.G.-Ad ',
-    description: '2025/Ad-film',
+    description: '2025/ Ad-film',
     image: '/img/flag.png',
     link: 'https://youtu.be/gLl-HPTiwho?si=Pei_JD5tf9QO9NZU',
     type: 'adfilm',
@@ -49,7 +49,7 @@ const projects = [
   {
     id: 6,
     title: 'Hrudaya Malhar',
-    description: '2021/Album',
+    description: '2021/ Album',
     image: '/img/hrudaya.jpg',
     link: 'https://youtu.be/oK30lqPjHgk?si=ECqrPQrbb0kA7OiL',
     type: 'theatre',
@@ -57,7 +57,7 @@ const projects = [
   {
     id:  7,
     title: 'Bloodline',
-    description: '2025/theatre',
+    description: '2025/ Theatre',
     image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
     link: 'https://youtu.be/BkR1m8npPsw?si=SclZY4k4I98HsM5T',
     type: 'shortfilm',
@@ -65,7 +65,7 @@ const projects = [
   {
     id: 8,
     title: 'Paythu Thornaval',
-    description: '2022/Album',
+    description: '2022/ Album',
     image: '/img/paythuthornaval.webp',
     link: 'https://youtu.be/piVp-2_wFpI?si=zu1_TH8eBd_D_a-C',
     type: 'theatre',
@@ -73,7 +73,7 @@ const projects = [
   {
     id: 9,
     title: 'Life Planner-Ad',
-    description: '2024/Ad-film',
+    description: '2024/ Ad-film',
     image: '/img/lpad.jpg',
     link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
     type: 'shortfilm',
@@ -81,7 +81,7 @@ const projects = [
   {
     id: 10,
     title: 'Big-Brand',
-    description: '2020/Ad-Film',
+    description: '2020/ Ad-Film',
     image: '/img/bb1.jpg',
     link: 'https://youtu.be/O3HfrDPumEo?si=cATl2RoUtU9JyPe2',
     type: 'shortfilm',
