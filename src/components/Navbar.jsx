@@ -66,7 +66,7 @@ const Navbar = () => {
           <Link to="/productions" className="text-white hover:text-gray-200 transition-colors duration-300">
             Productions
           </Link>
-          <Link to="mailto:hrlifeplanner@gmail.com" className="text-white hover:text-gray-200 transition-colors duration-300">
+          <Link to="mailto:filmaaticproductions@gmail.com" className="text-white hover:text-gray-200 transition-colors duration-300">
             Support
           </Link>
         </div>

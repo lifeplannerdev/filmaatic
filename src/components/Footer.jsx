@@ -48,7 +48,7 @@ const Footer = () => {
               </li>
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 <FaEnvelope className="mr-2" />
-                <a href="mailto:info@filmaatic.com" className="hover:text-pink-500 transition-all duration-300">filmaaticproductions@gmail.com</a>
+                <a href="mailto:filmaaticproductions@gmail.com" className="hover:text-pink-500 transition-all duration-300">filmaaticproductions@gmail.com</a>
               </li>
               <li className="mb-2 flex items-center justify-center md:justify-end">
                 
