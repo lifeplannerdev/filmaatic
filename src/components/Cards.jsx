@@ -41,7 +41,7 @@ const Cards = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-transparent relative overflow-hidden" style={{ marginBottom: "-50px" }}>
+    <section className="py-24 px-6 bg-transparent relative overflow-hidden" style={{ marginBottom: "-50px",marginTop:"-50px" }}>
       {/* Enhanced background elements */}
       
       <div className="absolute top-0 left-0 w-full h-full">
@@ -53,7 +53,7 @@ const Cards = () => {
         
         {/* Refined heading with consistent spacing */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-rose-400 mb-4">
+          <h2 className="text-2xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-rose-400 mb-4 mt-10">
             FILMAATIC INSTITUTE OF FASHION AND CINEMA
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-rose-500 mx-auto mb-6 rounded-full opacity-80"></div>

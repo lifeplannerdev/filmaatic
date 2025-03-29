@@ -19,25 +19,22 @@ const ModernHeader = () => {
       icon: School, 
       title: "School", 
       description: "Expert-led creative education & workshops",
-      color: "from-blue-600 to-blue-400",
+      color: "from-indigo-600 to-indigo-400",
       link: "/service"
     },
     { 
       icon: Film, 
       title: "Productions", 
       description: "Professional film & media projects",
-      color: "from-purple-600 to-purple-400",
+      color: "from-rose-600 to-rose-400",
       link: "/productions" 
     },
   ];
 
   return (
-    <section className="relative bg-transparent text-white overflow-hidden" style={{marginBottom:"-50px"}}>
-      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none overflow-hidden">
-        {/* Top-right large purple flare */}
-        
-        {/* Bottom-left blue flare */}
-        
+    <section className="relative bg-transparent text-white overflow-hidden" style={{marginBottom: "-50px"}}>
+      {/* Refined background effects */}
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden">
         {/* Center-right indigo pulsing flare */}
         <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-indigo-600/15 rounded-full filter blur-3xl animate-pulse" 
              style={{animationDuration: '8s'}}></div>
@@ -52,39 +49,41 @@ const ModernHeader = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+      <div className="container mx-auto px-4 py-16 md:py-20 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
-          {/* Logo Section */}
+          {/* Logo Section - Refined with subtle effects */}
           <div className="flex flex-col items-center justify-center lg:w-5/12">
             <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
-              <div className="absolute inset-0 bg-transparent rounded-xl blur-xl group-hover:opacity-100 opacity-70 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-rose-500/5 rounded-xl blur-xl group-hover:opacity-100 opacity-70 transition-opacity duration-700"></div>
               <img 
-  src="/img/FIFAC.png"  
-  alt="F.I.F.A.C Logo" 
-  className="relative h-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] max-w-md object-contain 
-    transform transition-all duration-500 
-    hover:scale-102 rounded-lg z-10"
-/>
+                src="/img/FIFAC.png"  
+                alt="F.I.F.A.C Logo" 
+                className="relative h-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] max-w-md object-contain 
+                  transform transition-all duration-500 
+                  hover:scale-105 rounded-lg z-10"
+              />
             </div>
           </div>
 
-          {/* Content Section */}
+          {/* Content Section - Aligned with card styling */}
           <div className="space-y-8 lg:w-7/12">
-            <div className="backdrop-blur-md border border-white/10 rounded-xl p-8 shadow-2xl bg-white/5">
-              <div className="flex items-center mb-8">
-                <h2 className="text-3xl font-light tracking-wider">
-                  <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">F.I.F.A.C</span>
+            <div className="backdrop-blur-md border border-white/10 rounded-xl p-8 shadow-xl bg-slate-800/40">
+              <div className="flex items-center mb-6">
+                <h2 className="text-2xl font-light tracking-wider">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-rose-400">F.I.F.A.C</span>
                 </h2>
                 <div className="h-px flex-grow ml-6 bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
               </div>
               
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-6">
                 {services.map((service, index) => (
                   <Link 
                     to={service.link}
                     key={index}
-                    className="group relative p-5 rounded-lg border border-white/5 transition-all duration-300 
-                      hover:bg-white/5 cursor-pointer overflow-hidden block"
+                    className="group relative p-5 rounded-lg border border-white/10 transition-all duration-300 
+                      hover:bg-white/5 hover:border-opacity-30 hover:shadow-md cursor-pointer overflow-hidden block"
+                    onMouseEnter={() => setHoverItem(index)}
+                    onMouseLeave={() => setHoverItem(null)}
                   >
                     {/* Background gradient that appears on hover */}
                     <div 
@@ -92,18 +91,16 @@ const ModernHeader = () => {
                     </div>
                     
                     <div className="flex items-center mb-3 relative z-10">
-                      <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color} mr-3 shadow-lg`}>
+                      <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color} mr-3 shadow-md`}>
                         <service.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
                       </div>
-                      <h3 className="font-medium text-lg">{service.title}</h3>
+                      <h3 className="font-light text-lg">{service.title}</h3>
                     </div>
                     
-                    <p className="text-sm text-slate-300 mb-2">{service.description}</p>
+                    <p className="text-sm text-slate-300 mb-3 h-10">{service.description}</p>
                     
-                    <div className={`flex items-center text-xs text-white/60 
-                      transition-all duration-300 transform 
-                      ${hoverItem === index ? 'translate-x-1 opacity-100' : 'opacity-0'}`}
-                    >
+                    <div className="flex items-center text-xs text-white/70 
+                      transition-all duration-300 transform group-hover:translate-x-1">
                       <span className="mr-1">Learn more</span>
                       <ArrowRight className="w-3 h-3" />
                     </div>
