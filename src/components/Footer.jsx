@@ -13,7 +13,7 @@ const Footer = () => {
           {/* About Section */}
           <div className="text-center md:text-left">
           
-            <h3 className="text-2xl font-bold mb-4"><span className="text-4xl" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Studio</h3>
+            <h3 className="text-2xl font-bold mb-4"><span className="text-4xl" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> Productions</h3>
             <p className="text-gray-400">
               Filmaatic Studio is a premier academy offering world-class training in acting, dance, and screen casting. Join us to unleash your potential and achieve your dreams in the entertainment industry.
             </p>
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Copyright Notice */}
         <div className="text-center mt-8 border-t border-gray-800 pt-8">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} Filmaatic Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} Filmaatic Productions. All rights reserved.
           </p>
         </div>
       </div>
