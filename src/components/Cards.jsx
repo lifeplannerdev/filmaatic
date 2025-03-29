@@ -28,7 +28,7 @@ const Cards = () => {
     {
       title: "Dance Studio",
       description: "Choreograph your artistic journey with our elite dance programs.",
-      image: "/img/dance.png",
+      image: "/img/dence3.png",
       accentColor: "border-emerald-600",
       textColor: "text-emerald-400",
       glareColor: "from-emerald-500/30 to-emerald-600/20",

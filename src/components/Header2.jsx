@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { School, Film, Star, FileText, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ModernHeader = () => {
   const [hoverItem, setHoverItem] = useState(null);
@@ -18,15 +19,16 @@ const ModernHeader = () => {
       icon: School, 
       title: "School", 
       description: "Expert-led creative education & workshops",
-      color: "from-blue-600 to-blue-400"
+      color: "from-blue-600 to-blue-400",
+      link: "/service"
     },
     { 
       icon: Film, 
       title: "Productions", 
       description: "Professional film & media projects",
-      color: "from-purple-600 to-purple-400" 
+      color: "from-purple-600 to-purple-400",
+      link: "/productions" 
     },
-    
   ];
 
   return (
@@ -78,13 +80,11 @@ const ModernHeader = () => {
               
               <div className="grid sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
-                  <div 
-                    key={index} 
+                  <Link 
+                    to={service.link}
+                    key={index}
                     className="group relative p-5 rounded-lg border border-white/5 transition-all duration-300 
-                      hover:bg-white/5 cursor-pointer overflow-hidden"
-                    onMouseEnter={() => setHoverItem(index)}
-                    onMouseLeave={() => setHoverItem(null)}
-                    onClick={service.title === "Enquire" ? scrollToEnquirySection : undefined}
+                      hover:bg-white/5 cursor-pointer overflow-hidden block"
                   >
                     {/* Background gradient that appears on hover */}
                     <div 
@@ -107,12 +107,10 @@ const ModernHeader = () => {
                       <span className="mr-1">Learn more</span>
                       <ArrowRight className="w-3 h-3" />
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>

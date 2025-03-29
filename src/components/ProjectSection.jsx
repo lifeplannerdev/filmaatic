@@ -41,7 +41,7 @@ const projects = [
   {
     id: 5,
     title: 'F.L.A.G.-Ad ',
-    description: '2025/Ad',
+    description: '2025/Ad-film',
     image: '/img/flag.png',
     link: 'https://youtu.be/gLl-HPTiwho?si=Pei_JD5tf9QO9NZU',
     type: 'adfilm',
@@ -73,7 +73,7 @@ const projects = [
   {
     id: 9,
     title: 'Life Planner-Ad',
-    description: '2024/ad-film',
+    description: '2024/Ad-film',
     image: '/img/lpad.jpg',
     link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
     type: 'shortfilm',
