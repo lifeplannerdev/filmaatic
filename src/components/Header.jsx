@@ -26,7 +26,7 @@ const Header = () => {
           Productions
           </span>
         </h1>
-        <p className="text-lg text-gray-300 font-montserrat">
+        <p className="text-lg text-gray-300 font-montserrat text-center text-1xl">
           Filmaatic Institute of Fashion And Cinema.
         </p>
 
