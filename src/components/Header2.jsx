@@ -56,7 +56,7 @@ const ModernHeader = () => {
             <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-rose-500/5 rounded-xl blur-xl group-hover:opacity-100 opacity-70 transition-opacity duration-700"></div>
               <img 
-                src="/img/FIFAC.png"  
+                src="/img/FIFAC.webp"  
                 alt="F.I.F.A.C Logo" 
                 className="relative h-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] max-w-md object-contain 
                   transform transition-all duration-500 
