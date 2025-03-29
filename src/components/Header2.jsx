@@ -26,53 +26,40 @@ const ModernHeader = () => {
       description: "Professional film & media projects",
       color: "from-purple-600 to-purple-400" 
     },
-    { 
-      icon: Star, 
-      title: "Projects", 
-      description: "Cutting-edge creative collaborations",
-      color: "from-amber-500 to-yellow-400" 
-    },
-    { 
-      icon: FileText, 
-      title: "Enquire", 
-      description: "Start your creative journey with us",
-      color: "from-emerald-600 to-green-400" 
-    }
+    
   ];
 
   return (
-    <section className="relative bg-transparent text-white overflow-hidden">
-      {/* Elegant Background Elements */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none overflow-hidden">
-        {[...Array(40)].map((_, i) => (
-          <div 
-            key={i} 
-            className="absolute rounded-full"
-            style={{
-              width: `${Math.random() * 10 + 2}px`,
-              height: `${Math.random() * 10 + 2}px`,
-              backgroundColor: `hsla(${Math.random() * 260}, 70%, 70%, 0.3)`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              filter: 'blur(1px)',
-              animation: `float ${Math.random() * 20 + 15}s infinite ease-in-out`,
-              animationDelay: `${Math.random() * 10}s`,
-            }}
-          />
-        ))}
+    <section className="relative bg-transparent text-white overflow-hidden" style={{marginBottom:"-100px"}}>
+      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none overflow-hidden">
+        {/* Top-right large purple flare */}
+        
+        {/* Bottom-left blue flare */}
+        
+        {/* Center-right indigo pulsing flare */}
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-indigo-600/15 rounded-full filter blur-3xl animate-pulse" 
+             style={{animationDuration: '8s'}}></div>
+        
+        {/* Top-left small flare */}
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-cyan-500/15 rounded-full filter blur-2xl animate-pulse"
+             style={{animationDuration: '12s'}}></div>
+        
+        {/* Bottom-right medium flare */}
+        <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-fuchsia-500/15 rounded-full filter blur-2xl animate-pulse"
+             style={{animationDuration: '10s'}}></div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
           {/* Logo Section */}
-          <div className="flex flex-col items-center lg:items-start lg:w-5/12">
-            <div className="relative group transition-all duration-500">
+          <div className="flex flex-col items-center justify-center lg:w-5/12">
+            <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
               <div className="absolute inset-0 bg-transparent rounded-xl blur-xl group-hover:opacity-100 opacity-70 transition-opacity duration-700"></div>
               <img 
                 src="/img/logo.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-full max-w-md object-contain 
+                className="relative h-auto w-[65%] max-w-md object-contain 
                   transform transition-all duration-500 
                   hover:scale-102 rounded-lg z-10"
               />
