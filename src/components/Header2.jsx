@@ -80,7 +80,7 @@ const ModernHeader = () => {
               <img 
                 src="/img/FIFAC3.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[53%] max-w-xs object-contain 
+                className="relative h-auto w-[70%] sm:w-[70%] md:w-[60%] lg:w-[53%] max-w-xs object-contain 
                   transform transition-all duration-500 p-4
                   hover:scale-105 rounded-lg z-10"
               />
