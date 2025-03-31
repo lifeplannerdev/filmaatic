@@ -43,7 +43,10 @@ const Cards = () => {
   return (
     <section className="py-24 px-6 bg-transparent relative overflow-hidden" style={{ marginBottom: "-50px",marginTop:"-50px" }}>
       {/* Enhanced background elements */}
-      
+      <div className="relative h-full w-full bg-slate-950">
+        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+      </div>
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 rounded-full blur-3xl"></div>
       </div>
