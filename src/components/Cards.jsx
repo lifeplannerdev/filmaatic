@@ -52,7 +52,7 @@ const Cards = () => {
         <ModernHeader />
         
         {/* Refined heading with consistent spacing */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 mt-20">
           <h2 className="text-2xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-rose-400 mb-4 mt-10">
             FILMAATIC INSTITUTE OF FASHION AND CINEMA
           </h2>

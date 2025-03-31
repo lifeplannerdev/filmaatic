@@ -106,6 +106,8 @@ const ProjectsSection = () => {
 
   return (
     <section className="py-12 bg-transparent" style={{ marginTop:"-50px" }}>
+      <div className="absolute top-1/4 left-0 w-1/3 h-1/3 rounded-full bg-indigo-500/10 blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-0 w-1/4 h-1/4 rounded-full bg-blue-500/10 blur-3xl"></div>
       <div className="container mx-auto px-4 max-w-6xl"> 
         <h2 className="text-3xl font-bold text-center text-white mb-10 mt-10">OUR PROJECTS</h2>
 
