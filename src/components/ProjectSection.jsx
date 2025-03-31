@@ -1,25 +1,45 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Sample data for projects with a `type` field
+// Sample data for projects with a `type` field and year
 const projects = [
   {
-    id: 1,
-    title: 'Sadhya',
-    description: '2016 / Short-Film',
-    image: '/img/sadhya.jpg',
-    link: 'https://youtu.be/zCTGAh53trE?si=8oY6b6X6DalqgVdx',
+    id: 7,
+    title: 'Bloodline',
+    description: '2025 / Theatre',
+    image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
+    link: 'https://youtu.be/BkR1m8npPsw?si=SclZY4k4I98HsM5T',
     type: 'shortfilm',
+    year: 2025
   },
   {
-    id: 2,
-    title: 'Asamayam',
-    description: '2020/ Short-Film',
-    image: '/img/asamayam.jpg',
-    link: 'https://youtu.be/_cr8oA2PrzQ?si=xMF7Qqzk77f1bhHK',
-    type: 'shortfilm',
+    id: 5,
+    title: 'F.L.A.G.-Ad',
+    description: '2025 / Ad-film',
+    image: '/img/flag.png',
+    link: 'https://youtu.be/gLl-HPTiwho?si=Pei_JD5tf9QO9NZU',
+    type: 'adfilm',
+    year: 2025
   },
   
+  {
+    id: 9,
+    title: 'Life Planner-Ad',
+    description: '2024 / Ad-film',
+    image: '/img/lpad.jpg',
+    link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
+    type: 'shortfilm',
+    year: 2024
+  },
+  {
+    id: 8,
+    title: 'Paythu Thornaval',
+    description: '2022 / Album',
+    image: '/img/paythuthornaval.webp',
+    link: 'https://youtu.be/piVp-2_wFpI?si=zu1_TH8eBd_D_a-C',
+    type: 'theatre',
+    year: 2022
+  },
   {
     id: 3,
     title: 'Canvas',
@@ -27,8 +47,44 @@ const projects = [
     image: '/img/canvas3.jpg',
     link: 'https://youtu.be/EBli6KsEHfY?si=jr006_QW9w50Vv8J',
     type: 'shortfilm',
+    year: 2021
   },
-  
+  {
+    id: 6,
+    title: 'Hrudaya Malhar',
+    description: '2021 / Album',
+    image: '/img/hrudaya.jpg',
+    link: 'https://youtu.be/oK30lqPjHgk?si=ECqrPQrbb0kA7OiL',
+    type: 'theatre',
+    year: 2021
+  },
+  {
+    id: 2,
+    title: 'Asamayam',
+    description: '2020 / Short-Film',
+    image: '/img/asamayam.jpg',
+    link: 'https://youtu.be/_cr8oA2PrzQ?si=xMF7Qqzk77f1bhHK',
+    type: 'shortfilm',
+    year: 2020
+  },
+  {
+    id: 10,
+    title: 'Big-Brand',
+    description: '2020 / Ad-Film',
+    image: '/img/bb1.jpg',
+    link: 'https://youtu.be/O3HfrDPumEo?si=cATl2RoUtU9JyPe2',
+    type: 'shortfilm',
+    year: 2020
+  },
+  {
+    id: 1,
+    title: 'Sadhya',
+    description: '2016 / Short-Film',
+    image: '/img/sadhya.jpg',
+    link: 'https://youtu.be/zCTGAh53trE?si=8oY6b6X6DalqgVdx',
+    type: 'shortfilm',
+    year: 2016
+  },
   {
     id: 4,
     title: 'India Ka RaGa',
@@ -36,64 +92,17 @@ const projects = [
     image: '/img/raga.jpg',
     link: 'https://youtu.be/LSeFGQSZlBo?si=quUTMg-IOUi4kW2b',
     type: 'theatre',
-  },
-  
-  {
-    id: 5,
-    title: 'F.L.A.G.-Ad ',
-    description: '2025/ Ad-film',
-    image: '/img/flag.png',
-    link: 'https://youtu.be/gLl-HPTiwho?si=Pei_JD5tf9QO9NZU',
-    type: 'adfilm',
-  },
-  {
-    id: 6,
-    title: 'Hrudaya Malhar',
-    description: '2021/ Album',
-    image: '/img/hrudaya.jpg',
-    link: 'https://youtu.be/oK30lqPjHgk?si=ECqrPQrbb0kA7OiL',
-    type: 'theatre',
-  },
-  {
-    id:  7,
-    title: 'Bloodline',
-    description: '2025/ Theatre',
-    image: 'https://m.media-amazon.com/images/M/MV5BODk0YTJlYjctZmNhNi00ZTA1LWIyYTQtNTJhNTk4ZWZlYjJiXkEyXkFqcGc@._V1_.jpg',
-    link: 'https://youtu.be/BkR1m8npPsw?si=SclZY4k4I98HsM5T',
-    type: 'shortfilm',
-  },
-  {
-    id: 8,
-    title: 'Paythu Thornaval',
-    description: '2022/ Album',
-    image: '/img/paythuthornaval.webp',
-    link: 'https://youtu.be/piVp-2_wFpI?si=zu1_TH8eBd_D_a-C',
-    type: 'theatre',
-  },
-  {
-    id: 9,
-    title: 'Life Planner-Ad',
-    description: '2024/ Ad-film',
-    image: '/img/lpad.jpg',
-    link: 'https://youtu.be/fGFLT5Tq3j0?si=zX4rFUk5j7YxTs4j',
-    type: 'shortfilm',
-  },
-  {
-    id: 10,
-    title: 'Big-Brand',
-    description: '2020/ Ad-Film',
-    image: '/img/bb1.jpg',
-    link: 'https://youtu.be/O3HfrDPumEo?si=cATl2RoUtU9JyPe2',
-    type: 'shortfilm',
+    year: 2016
   },
 ];
 
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState('films');
 
-  const filteredProjects = activeTab === 'musicals' 
+  const filteredProjects = (activeTab === 'musicals' 
     ? projects.filter((project) => project.type === 'theatre')
-    : projects.filter((project) => project.type === 'adfilm' || project.type === 'shortfilm');
+    : projects.filter((project) => project.type === 'adfilm' || project.type === 'shortfilm')
+  ).sort((a, b) => b.year - a.year); // Sort by year descending
 
   return (
     <section className="py-12 bg-transparent" style={{ marginTop:"-50px" }}>
