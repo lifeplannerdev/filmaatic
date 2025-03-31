@@ -61,7 +61,7 @@ const ModernHeader = () => {
           <div className="flex flex-col items-center justify-center lg:w-5/12">
             <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
               {/* Glassmorphism container - reduced size */}
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-rose-500/20 rounded-xl 
+              <div className="absolute inset-0 bg-transparent rounded-xl 
                 backdrop-blur-lg border border-white/20 shadow-xl scale-105 group-hover:scale-110 
                 group-hover:rotate-0 transition-all duration-700 max-w-xs mx-auto"></div>
               
