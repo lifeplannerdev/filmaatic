@@ -49,17 +49,33 @@ const ModernHeader = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-16 md:py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
-          {/* Logo Section - Refined with subtle effects */}
+      <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-10 items-center justify-between">
+          {/* Logo Section - Enhanced with glassmorphism effect (smaller size) */}
           <div className="flex flex-col items-center justify-center lg:w-5/12">
             <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-rose-500/5 rounded-xl blur-xl group-hover:opacity-100 opacity-70 transition-opacity duration-700"></div>
+              {/* Glassmorphism container - reduced size */}
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-rose-500/20 rounded-xl 
+                backdrop-blur-lg border border-white/20 shadow-xl transform -rotate-2 scale-105 group-hover:scale-110 
+                group-hover:rotate-0 transition-all duration-700 max-w-xs mx-auto"></div>
+              
+              {/* Inner glow effect - reduced size */}
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-fuchsia-600/30 rounded-xl 
+                opacity-0 group-hover:opacity-40 blur-xl transition-opacity duration-700 animate-pulse max-w-xs mx-auto"
+                style={{animationDuration: '5s'}}></div>
+              
+              {/* Decorative elements - adjusted sizes */}
+              <div className="absolute top-4 left-4 w-12 h-12 bg-white/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-6 right-8 w-10 h-10 bg-indigo-500/20 rounded-full blur-lg"></div>
+              <div className="absolute -bottom-2 left-1/3 w-16 h-2 bg-gradient-to-r from-indigo-500/50 to-rose-500/50 
+                rounded-full blur-md group-hover:w-20 transition-all duration-700"></div>
+              
+              {/* Logo image - reduced size */}
               <img 
                 src="/img/FIFAC3.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] max-w-md object-contain 
-                  transform transition-all duration-500 
+                className="relative h-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xs object-contain 
+                  transform transition-all duration-500 p-4
                   hover:scale-105 rounded-lg z-10"
               />
             </div>
