@@ -62,7 +62,7 @@ const ModernHeader = () => {
             <div className="relative group transition-all duration-500 flex items-center justify-center w-full">
               {/* Glassmorphism container - reduced size */}
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-rose-500/20 rounded-xl 
-                backdrop-blur-lg border border-white/20 shadow-xl transform -rotate-2 scale-105 group-hover:scale-110 
+                backdrop-blur-lg border border-white/20 shadow-xl scale-105 group-hover:scale-110 
                 group-hover:rotate-0 transition-all duration-700 max-w-xs mx-auto"></div>
               
               {/* Inner glow effect - reduced size */}
@@ -80,7 +80,7 @@ const ModernHeader = () => {
               <img 
                 src="/img/FIFAC3.png"  
                 alt="F.I.F.A.C Logo" 
-                className="relative h-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xs object-contain 
+                className="relative h-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[53%] max-w-xs object-contain 
                   transform transition-all duration-500 p-4
                   hover:scale-105 rounded-lg z-10"
               />
