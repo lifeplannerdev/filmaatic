@@ -1,7 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { useNavigate } from "react-router-dom";
-import ModernHeader from "./Header2";
+
 
 const Cards = () => {
   const navigate = useNavigate();
@@ -60,7 +60,7 @@ const Cards = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <ModernHeader />
+        
         
         {/* Refined heading with consistent spacing */}
         <div className="text-center mb-20 mt-20">

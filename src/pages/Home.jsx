@@ -7,6 +7,7 @@ import ProjectsSection from '../components/ProjectSection';
 import EnquirySection from '../components/Enquiry';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import HeroSection from '../components/Header3';
 
 
 const ScrollToTop = () => {
@@ -50,7 +51,17 @@ const Home = () => {
         
       </motion.div>
       
-      
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div variants={fadeInUp}>
+          <HeroSection />
+          
+        </motion.div>
+      </motion.div>
       {/* Cards Section */}
       <motion.div
         variants={staggerContainer}
