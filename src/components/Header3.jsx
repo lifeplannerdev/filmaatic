@@ -62,7 +62,7 @@ const HeroSection = () => {
               <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="img/logo3.png"
+                    src="img/logo5.png"
                     alt="Featured Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -73,7 +73,7 @@ const HeroSection = () => {
               <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="/img/std.jpg"
+                    src="https://i.pinimg.com/736x/41/08/8c/41088c469bad956c2fb814932717a9f3.jpg"
                     alt="Urban Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -83,7 +83,7 @@ const HeroSection = () => {
               <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="/img/prod.jpeg"
+                    src="https://i.pinimg.com/736x/6d/e0/9d/6de09dd7151ab2a1f58a94a4928cad18.jpg"
                     alt="Avant Garde Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
