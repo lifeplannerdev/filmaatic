@@ -1,6 +1,7 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
 import { useNavigate } from "react-router-dom";
+import HeroSection from '../components/Header3';
 
 
 const Cards = () => {
@@ -43,6 +44,7 @@ const Cards = () => {
   return (
     <section className="py-24 px-6 bg-transparent relative overflow-hidden" style={{ marginBottom: "-50px",marginTop:"-50px" }}>
       {/* Enhanced background elements */}
+      <HeroSection />
       <div className="absolute inset-0 overflow-hidden">
         {/* Primary gradient orbs with improved animation */}
         <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.2),rgba(255,255,255,0))] animate-float"></div>

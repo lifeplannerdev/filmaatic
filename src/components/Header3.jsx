@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-20 overflow-hidden text-white">
+    <section className="relative text-white" style={{marginTop: '10px'}}>
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-transparent z-0">
         {/* Animated gradient shapes - matched with enquiry section style */}
@@ -25,8 +25,8 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           {/* Text content */}
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-8">
-            {/* Institute badge */}
-            <div className="inline-flex px-4 py-1.5 mb-6 rounded-full bg-white/5 backdrop-blur-lg border border-white/10">
+            {/* Institute badge - removed dark overlay */}
+            <div className="inline-flex px-4 py-1.5 mb-6 rounded-full border border-white/10">
               <span className="text-indigo-300 font-medium text-sm">F . I . F . A . C</span>
             </div>
 
@@ -59,7 +59,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative">
             <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
               {/* Main featured product */}
-              <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl bg-gradient-to-r p-[1px] from-indigo-500 via-blue-500 to-indigo-600">
+              <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl bg-gradient-to-r p-[3px] from-indigo-800 via-blue-800 to-indigo-800">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
                     src="https://i.pinimg.com/736x/9f/06/7e/9f067eb6809820989cf81ff72f9c554c.jpg"
@@ -70,7 +70,7 @@ const HeroSection = () => {
               </div>
 
               {/* Secondary products */}
-              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[1px] from-indigo-600 to-blue-500">
+              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[3px] from-indigo-800 to-blue-800">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="/img/std.jpg"
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[1px] from-blue-500 to-indigo-600">
+              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[3px] from-blue-800 to-indigo-800">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="/img/prod.jpeg"
@@ -89,14 +89,15 @@ const HeroSection = () => {
                   />
                 </div>
               </div>
+              
             </div>
 
-            
-            <div className="absolute -bottom-10 left-1/4 w-1/2 h-1/4 rounded-full bg-indigo-500/30 blur-3xl -z-10"></div>
           </div>
+          
         </div>
         
       </div>
+      
     </section>
   );
 };
