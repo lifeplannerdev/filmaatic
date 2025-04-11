@@ -56,13 +56,13 @@ const HeroSection = () => {
           </div>
 
           {/* Fashion showcase */}
-          <div className="w-full md:w-1/2 relative">
+          <div className="w-full md:w-1/2 relative" style={{marginTop:"50px"}}>
             <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
               {/* Main featured product */}
-              <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl bg-gradient-to-r p-[3px] from-indigo-800 via-blue-800 to-indigo-800">
+              <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="https://i.pinimg.com/736x/9f/06/7e/9f067eb6809820989cf81ff72f9c554c.jpg"
+                    src="img/logo.png"
                     alt="Featured Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -70,7 +70,7 @@ const HeroSection = () => {
               </div>
 
               {/* Secondary products */}
-              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[3px] from-indigo-800 to-blue-800">
+              <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="/img/std.jpg"
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="h-48 overflow-hidden rounded-lg bg-gradient-to-br p-[3px] from-blue-800 to-indigo-800">
+              <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="/img/prod.jpeg"
