@@ -49,7 +49,7 @@ const Navbar = () => {
           className="text-3xl text-white hover:text-gray-200 transition-colors duration-300"
           style={{ fontFamily: "SmileCandy" }}
         >
-          Filmaatic Productions
+          Filmaatic
         </Link>
 
         {/* Desktop Menu */}

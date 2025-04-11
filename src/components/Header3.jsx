@@ -39,7 +39,7 @@ const HeroSection = () => {
 
             {/* Main heading with gradient text */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500">FILMAATIC</span> 
+              <span className="text-7xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> 
               <span className="text-white"> INSTITUTE OF FASHION AND CINEMA</span>
             </h1>
 
@@ -66,12 +66,12 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative" style={{marginTop:"10px"}}>
             <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
               {/* Main featured product */}
-              <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl">
+              <div className="col-span-2 h-50 md:h-70 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="img/logo6.png"
+                    src="img/logo7.png"
                     alt="Featured Collection"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
+                    className="h-full w-[100%] object-cover transition-transform duration-700 hover:scale-110"
                   />
                 </div>
               </div>
