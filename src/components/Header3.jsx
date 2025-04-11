@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <section className="relative text-white" style={{marginTop: '10px'}}>
+    <section className="relative text-white" style={{marginTop: '40px'}}>
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-transparent z-0">
         {/* Animated gradient shapes - matched with enquiry section style */}
@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-16 md:pt-20 lg:pt-24">
+      <div className="relative z-10 container mx-auto">
         <div className="flex flex-col md:flex-row items-center">
           {/* Text content */}
           <div className="w-full md:w-1/2 mb-10 md:mb-0 md:pr-8">
