@@ -62,7 +62,7 @@ const HeroSection = () => {
               <div className="col-span-2 h-64 md:h-80 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="img/logo.png"
+                    src="img/logo3.png"
                     alt="Featured Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
