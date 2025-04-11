@@ -1,6 +1,13 @@
+
 import React from 'react';
 
 const HeroSection = () => {
+  const scrollToEnquirySection = () => {
+    const enquirySection = document.getElementById("enquiry-section");
+    if (enquirySection) {
+      enquirySection.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+    }
+  };
   return (
     <section className="relative text-white" style={{marginTop: '40px'}}>
       {/* Subtle background pattern */}

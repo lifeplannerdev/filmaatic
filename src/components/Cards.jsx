@@ -66,8 +66,8 @@ const Cards = () => {
         
         {/* Refined heading with consistent spacing */}
         <div className="text-center mb-20 mt-20">
-          <h2 className="text-2xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-rose-400 mb-4 mt-10">
-            OUR PRODUCTION AND SCHOOL
+          <h2 className="text-4xl font-light tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-rose-400 mb-4 mt-10">
+            OUR SERVICES
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-rose-500 mx-auto mb-6 rounded-full opacity-80"></div>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
