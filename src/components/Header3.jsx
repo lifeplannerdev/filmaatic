@@ -66,7 +66,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative" style={{marginTop:"10px"}}>
             <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
               {/* Main featured product */}
-              <div className="col-span-2 h-50 md:h-70 overflow-hidden rounded-xl">
+              <div className="col-span-2 h-30 md:h-63 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
                     src="/img/box10.jpeg"
