@@ -80,7 +80,7 @@ const HeroSection = () => {
               <div className=" overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="img/box20.jpeg"
+                    src="img/box50.jpeg"
                     alt="Urban Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -90,7 +90,7 @@ const HeroSection = () => {
               <div className=" overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="img/box40.jpg"
+                    src="img/box60.jpg"
                     alt="Avant Garde Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
