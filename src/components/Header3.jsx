@@ -39,7 +39,7 @@ const HeroSection = () => {
 
             {/* Main heading with gradient text */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-7xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500" style={{ fontFamily: "SmileCandy" }}>Filmaatic</span> 
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500">FILMAATIC</span> 
               <span className="text-white"> INSTITUTE OF FASHION AND CINEMA</span>
             </h1>
 
