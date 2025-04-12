@@ -69,7 +69,7 @@ const HeroSection = () => {
               <div className="col-span-2 h-50 md:h-70 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="img/fm3.jpg"
+                    src="/img/box10.jpeg"
                     alt="Featured Collection"
                     className="h-full w-[100%] object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -80,7 +80,7 @@ const HeroSection = () => {
               <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="https://i.pinimg.com/736x/6d/e0/9d/6de09dd7151ab2a1f58a94a4928cad18.jpg"
+                    src="img/box20.jpeg"
                     alt="Urban Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
@@ -90,7 +90,7 @@ const HeroSection = () => {
               <div className="h-48 overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="img/fm2.jpeg"
+                    src="img/box40.jpg"
                     alt="Avant Garde Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
