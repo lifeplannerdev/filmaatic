@@ -77,7 +77,7 @@ const HeroSection = () => {
               </div>
 
               {/* Secondary products */}
-              <div className="h-48 overflow-hidden rounded-lg">
+              <div className=" overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="img/box20.jpeg"
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="h-48 overflow-hidden rounded-lg">
+              <div className=" overflow-hidden rounded-lg">
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
                     src="img/box40.jpg"
