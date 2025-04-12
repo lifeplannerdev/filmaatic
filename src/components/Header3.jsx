@@ -63,34 +63,34 @@ const HeroSection = () => {
           </div>
 
           {/* Fashion showcase */}
-          <div className="w-full md:w-1/2 relative" style={{marginTop:"10px"}}>
+          <div className="w-full md:w-1/2 relative" style={{marginTop:"10px" ,marginBottom:"-30px"}}>
             <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
               {/* Main featured product */}
-              <div className="col-span-2 h-30 md:h-63 overflow-hidden rounded-xl">
+              <div className="col-span-2 md:h-70 overflow-hidden rounded-xl">
                 <div className="h-full w-full overflow-hidden rounded-lg">
                   <img
-                    src="/img/box10.jpeg"
+                    src="/img/box90.png"
                     alt="Featured Collection"
-                    className="h-full w-[100%] object-cover transition-transform duration-700 hover:scale-110"
+                    className="h-[80%] w-[80%] object-cover transition-transform duration-700 hover:scale-110"
                   />
                 </div>
               </div>
 
               {/* Secondary products */}
-              <div className=" overflow-hidden rounded-lg">
+              <div className=" overflow-hidden rounded-lg" style={{marginTop:"-19px"}}>
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="img/box50.jpeg"
+                    src="img/box80.png"
                     alt="Urban Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
                 </div>
               </div>
               
-              <div className=" overflow-hidden rounded-lg">
+              <div className=" overflow-hidden rounded-lg" style={{marginTop:"-19px"}}>
                 <div className="h-full w-full overflow-hidden rounded-md">
                   <img
-                    src="img/box60.jpg"
+                    src="img/box70.png"
                     alt="Avant Garde Collection"
                     className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
                   />
