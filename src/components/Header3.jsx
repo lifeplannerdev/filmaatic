@@ -65,7 +65,7 @@ const HeroSection = () => {
           <div className="w-full md:w-1/2 relative" style={{marginTop:"25px"}}>
             <div className="relative z-10 overflow-hidden rounded-xl">
               <img
-                src="/img/movi2.png"
+                src="/img/movi3.png"
                 alt="Featured Image"
                 className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
                 
