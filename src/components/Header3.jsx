@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const HeroSection = () => {
@@ -62,43 +61,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Fashion showcase */}
-          <div className="w-full md:w-1/2 relative" style={{marginTop:"10px" ,marginBottom:"-30px"}}>
-            <div className="relative z-10 grid grid-cols-2 gap-4 md:p-4">
-              {/* Main featured product */}
-              <div className="col-span-2 md:h-70 overflow-hidden rounded-xl">
-                <div className="h-full w-full overflow-hidden rounded-lg">
-                  <img
-                    src="/img/box90.png"
-                    alt="Featured Collection"
-                    className="h-[80%] w-[80%] object-cover transition-transform duration-700 hover:scale-110"
-                  />
-                </div>
-              </div>
-
-              {/* Secondary products */}
-              <div className=" overflow-hidden rounded-lg" style={{marginTop:"-19px"}}>
-                <div className="h-full w-full overflow-hidden rounded-md">
-                  <img
-                    src="img/box80.png"
-                    alt="Urban Collection"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
-                  />
-                </div>
-              </div>
-              
-              <div className=" overflow-hidden rounded-lg" style={{marginTop:"-19px"}}>
-                <div className="h-full w-full overflow-hidden rounded-md">
-                  <img
-                    src="img/box70.png"
-                    alt="Avant Garde Collection"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-110"
-                  />
-                </div>
-              </div>
-              
+          {/* Single image container */}
+          <div className="w-full md:w-1/2 relative" style={{marginTop:"25px"}}>
+            <div className="relative z-10 overflow-hidden rounded-xl">
+              <img
+                src="/img/movi2.png"
+                alt="Featured Image"
+                className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
+                
+              />
             </div>
-
           </div>
           
         </div>
