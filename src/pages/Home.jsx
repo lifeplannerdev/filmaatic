@@ -97,9 +97,9 @@ const InaugurationModal = ({ isOpen, onClose }) => {
                 
                 <button
                   onClick={onClose}
-                  className="mt-4 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-1 flex items-center group mx-auto text-xs sm:text-sm"
+                  className="mt-6 px-4 py-2 rounded-lg bg-gray-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-1 flex items-center group mx-auto text-xs sm:text-sm"
                 >
-                  <span>Save the Date</span>
+                  <span>Close</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
