@@ -69,10 +69,10 @@ const InaugurationModal = ({ isOpen, onClose }) => {
                   <span className="text-indigo-300 font-medium text-xs">F . I . F . A . C</span>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500 font-[SmileCandy]">Grand Opening!</h2>
+                <h2 className="text-4xl sm:text-5xl bg-clip-text text-white bg-gradient-to-r from-indigo-400 to-blue-500 font-[SmileCandy]">Grand Opening!</h2>
                 <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-indigo-400 to-blue-500 mx-auto"></div>
                 
-                <p className="text-lg sm:text-xl font-semibold text-slate-300 font-[PoetsenOneRegular] leading-tight">
+                <p className="text-lg sm:text-xl font-semibold text-slate-300 leading-tight">
                   We're thrilled to open our new campus & dance studio in Kottayam!
                 </p>
                 
@@ -89,11 +89,11 @@ const InaugurationModal = ({ isOpen, onClose }) => {
                   <p className="text-base sm:text-lg font-bold text-indigo-300 mt-1">10:00 AM onwards</p>
                 </div>
                 
-                <div className="bg-indigo-600/10 backdrop-blur-sm border border-indigo-400/20 p-2 sm:p-3 rounded-lg">
+                <div className="bg-indigo-600/10 backdrop-blur-sm border border-indigo-400/20 p-4 sm:p-3 rounded-lg">
                   <p className="text-indigo-300 text-xs sm:text-sm">Refreshments & Social events</p>
                 </div>
                 
-                <p className="text-base sm:text-lg italic text-indigo-300 font-[SmileCandy] leading-tight">Let's make this grand opening memorable together!</p>
+                <p className="text-base sm:text-md italic text-indigo-300 leading-tight">Let's make this grand opening memorable together!</p>
                 
                 <button
                   onClick={onClose}
