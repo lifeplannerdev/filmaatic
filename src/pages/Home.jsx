@@ -78,13 +78,13 @@ const InaugurationModal = ({ isOpen, onClose }) => {
                 
                 <p className="text-sm sm:text-base text-slate-300 leading-tight">
                   You're cordially invited to join our special inauguration ceremony on
-                  <span className="font-bold text-lg sm:text-xl block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500">Monday, August 4th 2025</span>
+                  <span className="font-bold text-lg sm:text-xl block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-blue-500">Monday, August 15th 2025</span>
                 </p>
                 
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-2 sm:p-3 rounded-lg">
                   <p className="text-slate-300 text-xs sm:text-sm leading-tight">
                     <span className="block font-semibold text-indigo-300">Venue:</span>
-                    Railway Rd Nagampadam, Kottayam, Kerala
+                    St. Joseph's Syro-Malabar Church campus, Near metro station,Kalamassery, Kochi, Kerala
                   </p>
                   <p className="text-base sm:text-lg font-bold text-indigo-300 mt-1">10:00 AM onwards</p>
                 </div>
