@@ -73,7 +73,7 @@ const InaugurationModal = ({ isOpen, onClose }) => {
                 <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-indigo-400 to-blue-500 mx-auto"></div>
                 
                 <p className="text-lg sm:text-xl font-semibold text-slate-300 leading-tight">
-                  We're thrilled to open our new campus & dance studio in Kottayam!
+                  We're thrilled to open our new campus & dance studio in Kochi!
                 </p>
                 
                 <p className="text-sm sm:text-base text-slate-300 leading-tight">
