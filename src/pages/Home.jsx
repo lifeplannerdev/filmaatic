@@ -56,6 +56,7 @@ const Home = () => {
       
       {/* Cards Section */}
       <motion.div
+        id="productions-section"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -68,6 +69,7 @@ const Home = () => {
 
       {/* Projects Section */}
       <motion.div
+        id="projects-section"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

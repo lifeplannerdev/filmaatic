@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
-  const scrollToEnquirySection = () => {
-    const enquirySection = document.getElementById("enquiry-section");
-    if (enquirySection) {
-      enquirySection.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -49,15 +50,15 @@ const HeroSection = () => {
 
             {/* CTA Buttons - using same style as enquiry section */}
             <div className="flex flex-wrap gap-4">
-              <button className="px-5 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-1 flex items-center group">
+              <button onClick={() => scrollToSection('projects-section')} className="px-5 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 transition-all duration-300 transform hover:-translate-y-1 flex items-center group">
                 <span>Projects</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </button>
-              <button className="px-5 py-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+              <Link to="/productions" className="px-5 py-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 Productions
-              </button>
+              </Link>
             </div>
           </div>
 
